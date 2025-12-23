@@ -51,6 +51,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  -webkit-font-smoothing: antialiased; /* crisper text on light backgrounds */
+  text-rendering: optimizeLegibility; /* improve kerning and readability */
 }
 
 /* Grain Overlay for tactile feel */
@@ -133,9 +135,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.92); /* reduce blur/opacity to keep text sharp */
   border-bottom: 1px solid var(--glass-border);
   z-index: 1000;
   transition: var(--transition);
@@ -171,7 +171,7 @@ h3 {
   letter-spacing: 2px;
   transition: var(--transition);
   position: relative;
-  opacity: 0.6;
+  opacity: 0.8; /* higher base opacity for clarity */
 }
 
 .nav-links a:hover {
@@ -541,7 +541,7 @@ h3 {
   margin: 0;
   text-transform: none;
   letter-spacing: -0.8px;
-  transition: transform 0.3s ease-out, color 0.3s ease-out,
+  transition: color 0.3s ease-out,
     opacity 0.3s ease-out;
   color: var(--text-color);
   opacity: 1;
@@ -549,7 +549,6 @@ h3 {
 
 .project-item:hover .project-title,
 .project-item.project-active .project-title {
-  transform: translateX(6px);
   color: var(--micro-accent);
 }
 
