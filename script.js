@@ -455,6 +455,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             item.addEventListener('click', (e) => {
+                // Check if 'Demo Site' text/area was clicked
+                if (e.target.closest('.project-action') || e.target.closest('.project-cta-inline')) {
+                    const link = item.querySelector('.visit-link');
+                    if (link && link.href && link.href !== '#' && !link.href.endsWith('#')) {
+                        window.open(link.href, '_blank');
+                        return; // Stop here, don't open panel
+                    }
+                }
+
                 e.preventDefault();
                 openProjectPanel(item);
             });

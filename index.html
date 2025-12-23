@@ -1,433 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nina | Minimal Intelligence</title>
-    <meta
-      name="description"
-      content="Portfolio of Nina - AI systems, web apps, and automations. Minimal, practical intelligence."
-    />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
-    <div class="cursor-spotlight" data-cursor-spotlight></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nina | Minimal Intelligence</title>
+  <meta name="description"
+    content="Portfolio of Nina - AI systems, web apps, and automations. Minimal, practical intelligence." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
 
-    <header class="header">
-      <nav class="nav">
-        <a href="#home" class="logo">Nina.</a>
-        <div class="nav-right">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#demos">Web Apps</a></li>
-            <li><a href="#workflows">Automations</a></li>
-            <li><a href="#contact" class="cta-btn">Solve My Problem</a></li>
-            <li>
-              <button
-                id="theme-toggle"
-                class="theme-toggle"
-                aria-label="Toggle Theme"
-              >
-                <i class="fas fa-moon"></i>
-              </button>
-            </li>
-          </ul>
-          <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
+<body>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+  <div class="cursor-spotlight" data-cursor-spotlight></div>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#home" class="logo">Nina.</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#demos">Web Apps</a></li>
+          <li><a href="#workflows">Automations</a></li>
+          <li><a href="#contact" class="cta-btn">Solve My Problem</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-label">/ Nina Portfolio 2025</p>
+        <h1 class="headline">
+          MINIMAL <span class="outline">INTELLIGENCE</span>
+        </h1>
+        <p class="mission-statement">
+          Applied AI & automation, designed with restraint.<br />
+          I build AI systems, web apps, and automations<br />
+          that solve real problems — quietly and efficiently.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-modern">Solve My Problem</a>
+          <a href="#demos" class="btn-modern secondary">View Index → See Live Demos</a>
+        </div>
+        <p class="hero-microcopy">
+          <small>Focused on useful systems. No buzzwords.</small>
+        </p>
+      </div>
+      <div class="scroll-indicator">
+        <span class="scroll-text">EXPLORE</span>
+        <div class="scroll-line"></div>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I design and automate systems that remove friction. <br />
+              Complex systems. Simple outcomes.
+            </p>
+
+            <p class="location-tag">
+              Based in Paris. <br />
+              Working globally.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="number">SYSTEMS</span>
+              <span class="label">Web Applications</span>
+            </div>
+            <div class="stat-item">
+              <span class="number">AUTOMATION</span>
+              <span class="label">AI Systems & Automations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Web App Demos Section -->
+    <section id="demos" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-header-row">
+          <p class="projects-subcopy">
+            Selected AI systems, web apps, and automations.
+          </p>
+          <button type="button" id="demo-mode-toggle" class="demo-mode-toggle" aria-pressed="false">
+            <span class="demo-mode-label">Demo mode</span>
+            <span class="demo-mode-indicator" aria-hidden="true"></span>
           </button>
         </div>
-      </nav>
-    </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="hero">
-        <div class="hero-content">
-          <p class="hero-label">/ Nina Portfolio 2025</p>
-          <h1 class="headline">
-            MINIMAL <span class="outline">INTELLIGENCE</span>
-          </h1>
-          <p class="mission-statement">
-            Applied AI & automation, designed with restraint.<br />
-            I build AI systems, web apps, and automations<br />
-            that solve real problems — quietly and efficiently.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn-modern">Solve My Problem</a>
-            <a href="#demos" class="btn-modern secondary"
-              >View Index → See Live Demos</a
-            >
-          </div>
-          <p class="hero-microcopy">
-            <small>Focused on useful systems. No buzzwords.</small>
-          </p>
-        </div>
-        <div class="scroll-indicator">
-          <span class="scroll-text">EXPLORE</span>
-          <div class="scroll-line"></div>
-        </div>
-        <div class="hero-glow"></div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <div class="container">
-          <div class="section-header">
-            <h2>About</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-text">
-              <p>
-                I design and automate systems that remove friction. <br />
-                Complex systems. Simple outcomes.
-              </p>
-
-              <p class="location-tag">
-                Based in Paris. <br />
-                Working globally.
-              </p>
-            </div>
-            <div class="about-stats">
-              <div class="stat-item">
-                <span class="number">SYSTEMS</span>
-                <span class="label">Web Applications</span>
+        <div class="project-index" role="list">
+          <!-- Project item 1 -->
+          <div class="project-item" data-project="themrstudio" data-image="the_mr_studio_preview"
+            data-title="THE MR Studio" data-problem="High-end salon needed a booking experience that matched its brand."
+            data-solution="A minimal booking interface connected to calendar and notifications—fast, clear, and on-brand."
+            data-live="Clients can explore the live production site." role="listitem" tabindex="0">
+            <div class="project-main">
+              <div class="project-info">
+                <span class="project-number">01</span>
+                <h3 class="project-title">THE MR Studio</h3>
+                <span class="project-category">Beauty & Aesthetic</span>
               </div>
-              <div class="stat-item">
-                <span class="number">AUTOMATION</span>
-                <span class="label">AI Systems & Automations</span>
+              <div class="project-action">
+                <span class="project-cta-inline">Demo Site →</span>
               </div>
             </div>
+            <div class="project-extra">
+              <p class="project-summary">
+                A quiet, fast booking experience for a luxury beauty studio.
+              </p>
+              <p class="project-stack">
+                Stack: Web app, booking engine, integrations.
+              </p>
+            </div>
+            <a href="https://themrstudio.net/" target="_blank" class="visit-link">Visit Site <span
+                class="arrow">↗</span></a>
+          </div>
+
+          <!-- Project item 2 -->
+          <div class="project-item" data-project="booking" data-image="luxury_booking_preview" data-title="Booking"
+            data-problem="Service businesses were losing time managing bookings manually."
+            data-solution="A lightweight booking system with approvals, reminders, and clear status for every request."
+            data-live="The core booking flow is live and testable." role="listitem" tabindex="0">
+            <div class="project-main">
+              <div class="project-info">
+                <span class="project-number">02</span>
+                <h3 class="project-title">Booking</h3>
+                <span class="project-category">SaaS / Management</span>
+              </div>
+              <div class="project-action">
+                <span class="project-cta-inline">Demo Site →</span>
+              </div>
+            </div>
+            <div class="project-extra">
+              <p class="project-summary">
+                A booking layer for SMEs that need clarity, not complexity.
+              </p>
+              <p class="project-stack">
+                Stack: Frontend, API, calendar, notifications.
+              </p>
+            </div>
+            <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" class="visit-link">Visit Site <span
+                class="arrow">↗</span></a>
+          </div>
+
+          <!-- Project item 3 -->
+          <div class="project-item" data-project="aivision" data-image="ai_vision_lab_preview"
+            data-title="AI Vision Lab"
+            data-problem="Non-technical teams needed a way to test vision models without touching code."
+            data-solution="A simple interface to upload, inspect, and compare AI-generated outputs."
+            data-live="Demo flows can be walked through live during a call." role="listitem" tabindex="0">
+            <div class="project-main">
+              <div class="project-info">
+                <span class="project-number">03</span>
+                <h3 class="project-title">AI Vision Lab</h3>
+                <span class="project-category">Machine Learning</span>
+              </div>
+              <div class="project-action">
+                <span class="project-cta-inline">Demo Site →</span>
+              </div>
+            </div>
+            <div class="project-extra">
+              <p class="project-summary">
+                A small lab to explore computer vision results without slides.
+              </p>
+              <p class="project-stack">
+                Stack: Model API, minimal interface, logging.
+              </p>
+            </div>
+            <a href="#" class="visit-link">View Demo <span class="arrow">↗</span></a>
           </div>
         </div>
-      </section>
 
-      <!-- Web App Demos Section -->
-      <section id="demos" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Projects</h2>
+        <!-- Floating Preview Portal -->
+        <div class="hover-reveal" id="hover-reveal">
+          <div class="hover-reveal__inner">
+            <div class="hover-reveal__img" id="hover-reveal-img"></div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="projects-header-row">
-            <p class="projects-subcopy">
-              Selected AI systems, web apps, and automations.
+    <!-- n8n & Workflows Section -->
+    <section id="workflows" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>AI Systems & Automations</h2>
+        </div>
+
+        <div class="workflow-grid-layout">
+          <!-- Left: Visual/Info -->
+          <div class="workflow-info-card">
+            <h3>Support Automation</h3>
+            <p>
+              Built with n8n and conversational AI backends, adaptable across
+              channels for real support work.
             </p>
-            <button
-              type="button"
-              id="demo-mode-toggle"
-              class="demo-mode-toggle"
-              aria-pressed="false"
-            >
-              <span class="demo-mode-label">Demo mode</span>
-              <span class="demo-mode-indicator" aria-hidden="true"></span>
-            </button>
+
+            <div class="workflow-visual-mini">
+              <div class="node n1">User</div>
+              <div class="connector c1"></div>
+              <div class="node n2">System</div>
+              <div class="connector c2"></div>
+              <div class="node n3">Answer</div>
+            </div>
+
+            <ul class="tech-tags">
+              <li><i class="fas fa-bolt"></i> n8n</li>
+              <li><i class="fas fa-project-diagram"></i> Autonomous</li>
+              <li><i class="fas fa-clock"></i> Real-time</li>
+            </ul>
           </div>
 
-          <div class="project-index" role="list">
-            <!-- Project item 1 -->
-            <div
-              class="project-item"
-              data-project="themrstudio"
-              data-image="the_mr_studio_preview"
-              data-title="THE MR Studio"
-              data-problem="High-end salon needed a booking experience that matched its brand."
-              data-solution="A minimal booking interface connected to calendar and notifications—fast, clear, and on-brand."
-              data-live="Clients can explore the live production site."
-              role="listitem"
-              tabindex="0"
-            >
-              <div class="project-main">
-                <div class="project-info">
-                  <span class="project-number">01</span>
-                  <h3 class="project-title">THE MR Studio</h3>
-                  <span class="project-category">Beauty & Aesthetic</span>
-                </div>
-                <div class="project-action">
-                  <span class="project-cta-inline">Live demo →</span>
-                </div>
+          <!-- Right: Embedded Chat Interface -->
+          <div class="embedded-chat-container">
+            <div class="chat-header-embedded">
+              <div class="chat-header-left">
+                <div class="status-dot"></div>
+                <h3>Live Demo</h3>
               </div>
-              <div class="project-extra">
-                <p class="project-summary">
-                  A quiet, fast booking experience for a luxury beauty studio.
-                </p>
-                <p class="project-stack">
-                  Stack: Web app, booking engine, integrations.
-                </p>
-              </div>
-              <a
-                href="https://themrstudio.net/"
-                target="_blank"
-                class="visit-link"
-                >Visit Site <span class="arrow">↗</span></a
-              >
+              <button id="chat-reset" class="chat-reset-btn" title="Reset Chat">
+                <i class="fas fa-redo-alt"></i>
+              </button>
             </div>
-
-            <!-- Project item 2 -->
-            <div
-              class="project-item"
-              data-project="booking"
-              data-image="luxury_booking_preview"
-              data-title="Luxury Booking"
-              data-problem="Service businesses were losing time managing bookings manually."
-              data-solution="A lightweight booking system with approvals, reminders, and clear status for every request."
-              data-live="The core booking flow is live and testable."
-              role="listitem"
-              tabindex="0"
-            >
-              <div class="project-main">
-                <div class="project-info">
-                  <span class="project-number">02</span>
-                  <h3 class="project-title">Luxury Booking</h3>
-                  <span class="project-category">SaaS / Management</span>
-                </div>
-                <div class="project-action">
-                  <span class="project-cta-inline">Live demo →</span>
-                </div>
-              </div>
-              <div class="project-extra">
-                <p class="project-summary">
-                  A booking layer for SMEs that need clarity, not complexity.
-                </p>
-                <p class="project-stack">
-                  Stack: Frontend, API, calendar, notifications.
-                </p>
-              </div>
-              <a
-                href="https://ninadnj.github.io/bookingwebapp/"
-                target="_blank"
-                class="visit-link"
-                >Visit Site <span class="arrow">↗</span></a
-              >
+            <div class="chat-body scrollable" id="chat-messages">
+              <!-- JS will inject Persona Options here -->
             </div>
-
-            <!-- Project item 3 -->
-            <div
-              class="project-item"
-              data-project="aivision"
-              data-image="ai_vision_lab_preview"
-              data-title="AI Vision Lab"
-              data-problem="Non-technical teams needed a way to test vision models without touching code."
-              data-solution="A simple interface to upload, inspect, and compare AI-generated outputs."
-              data-live="Demo flows can be walked through live during a call."
-              role="listitem"
-              tabindex="0"
-            >
-              <div class="project-main">
-                <div class="project-info">
-                  <span class="project-number">03</span>
-                  <h3 class="project-title">AI Vision Lab</h3>
-                  <span class="project-category">Machine Learning</span>
-                </div>
-                <div class="project-action">
-                  <span class="project-cta-inline">Live demo →</span>
-                </div>
-              </div>
-              <div class="project-extra">
-                <p class="project-summary">
-                  A small lab to explore computer vision results without slides.
-                </p>
-                <p class="project-stack">
-                  Stack: Model API, minimal interface, logging.
-                </p>
-              </div>
-              <a href="#" class="visit-link"
-                >View Demo <span class="arrow">↗</span></a
-              >
+            <div id="typing-indicator" class="typing-indicator hidden">
+              <span></span><span></span><span></span>
             </div>
-          </div>
-
-          <!-- Floating Preview Portal -->
-          <div class="hover-reveal" id="hover-reveal">
-            <div class="hover-reveal__inner">
-              <div class="hover-reveal__img" id="hover-reveal-img"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- n8n & Workflows Section -->
-      <section id="workflows" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>AI Systems & Automations</h2>
-          </div>
-
-          <div class="workflow-grid-layout">
-            <!-- Left: Visual/Info -->
-            <div class="workflow-info-card">
-              <h3>Support Automation</h3>
-              <p>
-                Built with n8n and conversational AI backends, adaptable across
-                channels for real support work.
-              </p>
-
-              <div class="workflow-visual-mini">
-                <div class="node n1">User</div>
-                <div class="connector c1"></div>
-                <div class="node n2">System</div>
-                <div class="connector c2"></div>
-                <div class="node n3">Answer</div>
-              </div>
-
-              <ul class="tech-tags">
-                <li><i class="fas fa-bolt"></i> n8n</li>
-                <li><i class="fas fa-project-diagram"></i> Autonomous</li>
-                <li><i class="fas fa-clock"></i> Real-time</li>
-              </ul>
-            </div>
-
-            <!-- Right: Embedded Chat Interface -->
-            <div class="embedded-chat-container">
-              <div class="chat-header-embedded">
-                <div class="chat-header-left">
-                  <div class="status-dot"></div>
-                  <h3>Live Demo</h3>
-                </div>
-                <button
-                  id="chat-reset"
-                  class="chat-reset-btn"
-                  title="Reset Chat"
-                >
-                  <i class="fas fa-redo-alt"></i>
-                </button>
-              </div>
-              <div class="chat-body scrollable" id="chat-messages">
-                <!-- JS will inject Persona Options here -->
-              </div>
-              <div id="typing-indicator" class="typing-indicator hidden">
-                <span></span><span></span><span></span>
-              </div>
-              <form class="chat-input-area embedded" id="chat-form">
-                <input
-                  type="text"
-                  id="chat-input"
-                  placeholder="Select a persona to start..."
-                  autocomplete="off"
-                />
-                <button type="submit" id="send-btn">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section contact">
-        <div class="container">
-          <div class="contact-wrapper">
-            <div class="contact-intro">
-              <h2>Contact</h2>
-              <p>Have a project? Let's talk.</p>
-              <a href="mailto:contact@nina.dev" class="email-link"
-                >contact@nina.dev</a
-              >
-            </div>
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" required />
-              </div>
-              <div class="form-group">
-                <label for="problem">Message</label>
-                <textarea id="problem" required></textarea>
-              </div>
-              <button type="submit" class="btn primary submit-btn">Send</button>
+            <form class="chat-input-area embedded" id="chat-form">
+              <input type="text" id="chat-input" placeholder="Select a persona to start..." autocomplete="off" />
+              <button type="submit" id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
             </form>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- Project detail slide-in panel -->
-    <div
-      class="project-panel-overlay"
-      id="project-panel-overlay"
-      aria-hidden="true"
-    >
-      <aside
-        class="project-panel"
-        id="project-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="project-panel-title"
-      >
-        <div class="project-panel-header">
-          <h3 id="project-panel-title" class="project-panel-title"></h3>
-          <button
-            type="button"
-            class="project-panel-close"
-            id="project-panel-close"
-            aria-label="Close project details"
-          >
-            ×
-          </button>
-        </div>
-        <div class="project-panel-body">
-          <div class="project-panel-section">
-            <div class="project-panel-meta-label">Problem</div>
-            <p id="project-panel-problem"></p>
-          </div>
-          <div class="project-panel-section">
-            <div class="project-panel-meta-label">Solution</div>
-            <p id="project-panel-solution"></p>
-          </div>
-          <div class="project-panel-section">
-            <div class="project-panel-meta-label">Live</div>
-            <p id="project-panel-live"></p>
-          </div>
-        </div>
-        <div class="project-panel-footer">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            class="btn-modern"
-            id="project-panel-link"
-            >Open full demo</a
-          >
-        </div>
-      </aside>
-    </div>
-
-    <footer class="footer">
-      <p>
-        Created by Nina <br />
-        with love & coffee
-      </p>
-      <div class="social-links">
-        <a href="https://github.com" target="_blank" aria-label="GitHub"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter"
-          ><i class="fa-brands fa-x-twitter"></i
-        ></a>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-intro">
+            <h2>Contact</h2>
+            <p>Have a project? Let's talk.</p>
+            <a href="mailto:contact@nina.dev" class="email-link">contact@nina.dev</a>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="problem">Message</label>
+              <textarea id="problem" required></textarea>
+            </div>
+            <button type="submit" class="btn primary submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project detail slide-in panel -->
+  <div class="project-panel-overlay" id="project-panel-overlay" aria-hidden="true">
+    <aside class="project-panel" id="project-panel" role="dialog" aria-modal="true"
+      aria-labelledby="project-panel-title">
+      <div class="project-panel-header">
+        <h3 id="project-panel-title" class="project-panel-title"></h3>
+        <button type="button" class="project-panel-close" id="project-panel-close" aria-label="Close project details">
+          ×
+        </button>
+      </div>
+      <div class="project-panel-body">
+        <div class="project-panel-section">
+          <div class="project-panel-meta-label">Problem</div>
+          <p id="project-panel-problem"></p>
+        </div>
+        <div class="project-panel-section">
+          <div class="project-panel-meta-label">Solution</div>
+          <p id="project-panel-solution"></p>
+        </div>
+        <div class="project-panel-section">
+          <div class="project-panel-meta-label">Live</div>
+          <p id="project-panel-live"></p>
+        </div>
+      </div>
+      <div class="project-panel-footer">
+        <a href="#" target="_blank" rel="noreferrer" class="btn-modern" id="project-panel-link">Demo Site</a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Created by Nina <br />
+      with love & coffee
+    </p>
+    <div class="social-links">
+      <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
