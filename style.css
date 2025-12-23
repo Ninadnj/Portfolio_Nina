@@ -1308,6 +1308,8 @@ h3 {
 
   .hero-actions {
     justify-content: center;
+    gap: 16px;
+    flex-direction: column;
   }
 
   .about-main-line {
@@ -1342,6 +1344,33 @@ h3 {
   .workflow-item,
   .contact-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .project-main {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .project-extra {
+    margin-top: 8px;
+  }
+
+  .project-item {
+    padding: 24px 0;
+  }
+
+  .project-number {
+    margin-bottom: 6px;
+  }
+
+  .project-cta-inline {
+    opacity: 1;
+    display: inline-block;
+    margin-top: 6px;
   }
 
   .header {
