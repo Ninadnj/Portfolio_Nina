@@ -405,6 +405,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             item.addEventListener('click', (e) => {
+                // Allow the direct "Visit Site" link to work normally
+                if (e.target.closest('.visit-link')) {
+                    return;
+                }
                 // Check if 'Demo Site' text/area was clicked
                 if (e.target.closest('.project-action') || e.target.closest('.project-cta-inline')) {
                     const link = item.querySelector('.visit-link');
