@@ -268,7 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const data = await response.json();
                 showTyping(false);
-                addMessage(data.output || "I've received your data via n8n!", 'bot');
+                const botReply = data?.output || data?.content;
+                addMessage(botReply || 'Thanks. Tell me the service and time you want, and I\'ll check availability.', 'bot');
             } else {
                 // Simulated Reply
                 setTimeout(() => {
