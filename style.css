@@ -316,6 +316,10 @@ h3 {
 }
 
 .btn-modern {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 18px 40px;
   text-decoration: none;
   text-transform: uppercase;
@@ -325,12 +329,15 @@ h3 {
   border: 1px solid var(--text-color);
   background: var(--text-color);
   color: var(--bg-color);
-  transition: var(--transition);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.4, 1), background-color 0.4s ease,
+    color 0.4s ease, border-color 0.4s ease;
 }
 
 .btn-modern:hover {
   background: transparent;
   color: var(--text-color);
+  transform: translateY(-2px);
+  border-color: var(--text-color);
 }
 
 .btn-modern.secondary {
@@ -341,6 +348,33 @@ h3 {
 .btn-modern.secondary:hover {
   background: var(--text-color);
   color: var(--bg-color);
+}
+
+.btn-modern:focus-visible {
+  outline: 1px solid var(--text-color);
+  outline-offset: 4px;
+  transform: translateY(-1px);
+}
+
+.btn-with-note::after {
+  content: "Systems. Not chaos.";
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translate(-50%, 6px);
+  opacity: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.btn-with-note:hover::after,
+.btn-with-note:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .hero-glow {
