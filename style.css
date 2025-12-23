@@ -233,6 +233,12 @@ h3 {
   align-items: center;
 }
 
+/* Keep the projects section crisp in light mode (white background, dark text) */
+#demos {
+  background: var(--secondary-bg);
+  color: var(--text-color);
+}
+
 .container {
   width: 100%;
   max-width: 1000px;
