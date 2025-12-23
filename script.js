@@ -210,71 +210,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const N8N_WEBHOOK_URL = ''; // USER: Add your n8n webhook URL here
 
-    const PERSONAS = [
-        {
-            id: 'receptionist',
-            name: 'Receptionist',
-            icon: 'fa-cut',
-            desc: 'Salon booking & support',
-            bootMsg: 'Hello! I am Steven Salon\'s virtual receptionist. How can I help you book today?',
-            prompt: 'I want to book a haircut.'
-        },
-        {
-            id: 'manager',
-            name: 'Booking Manager',
-            icon: 'fa-calendar-check',
-            desc: 'Availability & scheduling',
-            bootMsg: 'Booking Manager here. I can help you check slots and confirm schedules.',
-            prompt: 'Check availability for Friday.'
-        },
-        {
-            id: 'support',
-            name: 'AI Support',
-            icon: 'fa-headset',
-            desc: 'Technical help & FAQs',
-            bootMsg: 'AI Support online. Describe your issue and I will provide solutions.',
-            prompt: 'How do I change my booking?'
-        }
-    ];
+    const ACTIVE_PERSONA = {
+        id: 'beauty-salon-assistant',
+        name: 'Beauty Salon Assistant',
+        bootMsg: 'Welcome. I’m a beauty salon assistant. I can help with bookings, availability, and common client questions.'
+    };
 
-    let currentPersona = null;
+    let currentPersona = ACTIVE_PERSONA;
 
     function initChat() {
         chatMessages.innerHTML = '';
-        chatInput.placeholder = "Select a persona above...";
-        chatInput.disabled = true;
-
-        const welcomeMsg = document.createElement('div');
-        welcomeMsg.className = 'message bot';
-        welcomeMsg.innerHTML = '<p>Welcome! Choose a persona to begin the live demo experience.</p>';
-        chatMessages.appendChild(welcomeMsg);
-
-        const selectionContainer = document.createElement('div');
-        selectionContainer.className = 'persona-selection-container';
-
-        PERSONAS.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'persona-card';
-            card.innerHTML = `
-                <i class="fas ${p.icon}"></i>
-                <h4>${p.name}</h4>
-                <p>${p.desc}</p>
-            `;
-            card.onclick = () => selectPersona(p);
-            selectionContainer.appendChild(card);
-        });
-
-        chatMessages.appendChild(selectionContainer);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    function selectPersona(persona) {
-        currentPersona = persona;
-        chatMessages.innerHTML = '';
-        addMessage(persona.bootMsg, 'bot');
+        addMessage(ACTIVE_PERSONA.bootMsg, 'bot');
 
         chatInput.disabled = false;
-        chatInput.placeholder = `Message ${persona.name}...`;
+        chatInput.placeholder = "Ask about appointments, hours, or services...";
         chatInput.focus();
     }
 
@@ -285,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatReset) {
         chatReset.addEventListener('click', () => {
             initChat();
-            currentPersona = null;
+            currentPersona = ACTIVE_PERSONA;
         });
     }
 
@@ -293,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     chatForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const message = chatInput.value.trim();
-        if (message && currentPersona) {
+        if (message) {
             handleUserMessage(message);
         }
     });
@@ -324,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Simulated Reply
                 setTimeout(() => {
                     showTyping(false);
-                    addMessage(`I am the ${currentPersona.name} Agent. Wire me to n8n to handle this live!`, 'bot');
+                    addMessage('Thanks. Tell me the service and time you want, and I\'ll check availability.', 'bot');
                 }, 1500);
             }
         } catch (error) {

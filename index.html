@@ -248,24 +248,25 @@
             <div class="chat-header-embedded">
               <div class="chat-header-left">
                 <div class="status-dot"></div>
-                <h3>Live Demo</h3>
+                <h3>Live Demo — Beauty Salon Assistant</h3>
               </div>
               <button id="chat-reset" class="chat-reset-btn" title="Reset Chat">
                 <i class="fas fa-redo-alt"></i>
               </button>
             </div>
             <div class="chat-body scrollable" id="chat-messages">
-              <!-- JS will inject Persona Options here -->
+              <!-- JS injects chat messages -->
             </div>
             <div id="typing-indicator" class="typing-indicator hidden">
               <span></span><span></span><span></span>
             </div>
             <form class="chat-input-area embedded" id="chat-form">
-              <input type="text" id="chat-input" placeholder="Select a persona to start..." autocomplete="off" />
+              <input type="text" id="chat-input" placeholder="Ask about appointments, hours, or services..." autocomplete="off" />
               <button type="submit" id="send-btn">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </form>
+            <p class="chat-helper-text">Try asking about appointments, opening hours, or services.</p>
           </div>
         </div>
       </div>
