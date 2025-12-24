@@ -374,12 +374,67 @@ function fillPrompt(text) {
 
 
 
+
+
+// ============================================
+// LANGUAGE TOGGLE - English/Georgian
+// ============================================
+
+function initLanguageToggle() {
+  const langToggle = document.getElementById('langToggle');
+  const body = document.body;
+  
+  if (!langToggle) {
+    console.warn('Language toggle button not found');
+    return;
+  }
+  
+  // Get saved language or default to English
+  const currentLang = localStorage.getItem('language') || 'en';
+  setLanguage(currentLang);
+  
+  // Toggle on click
+  langToggle.addEventListener('click', function() {
+    const currentLang = body.getAttribute('data-lang') || 'en';
+    const newLang = currentLang === 'en' ? 'ka' : 'en';
+    setLanguage(newLang);
+  });
+}
+
+function setLanguage(lang) {
+  const body = document.body;
+  const langEn = document.querySelector('.lang-en');
+  const langKa = document.querySelector('.lang-ka');
+  
+  // Set body attribute
+  body.setAttribute('data-lang', lang);
+  
+  // Save preference
+  localStorage.setItem('language', lang);
+  
+  // Update toggle button
+  if (langEn && langKa) {
+    langEn.classList.remove('active');
+    langKa.classList.remove('active');
+    
+    if (lang === 'en') {
+      langEn.classList.add('active');
+    } else {
+      langKa.classList.add('active');
+    }
+  }
+  
+  console.log('Language set to:', lang);
+}
+
 // ============================================
 // INITIALIZE ALL ON DOM READY
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Initializing portfolio...');
+  
+  initLanguageToggle();
   
   initThemeToggle();
   initCustomCursor();
