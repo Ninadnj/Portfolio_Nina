@@ -2300,6 +2300,147 @@ h3 {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+
+
+/* ============================================
+   CUSTOM AUTOMATIONS SECTION
+   ============================================ */
+
+.section.custom-workflows {
+  background: var(--secondary-bg);
+  padding: 120px 5%;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-workflows-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.custom-headline {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.custom-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 700px;
+}
+
+.custom-examples {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.example-item {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.example-divider {
+  color: var(--border-color);
+  opacity: 0.4;
+  font-size: 0.9rem;
+}
+
+.custom-cta {
+  margin-top: 20px;
+}
+
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.custom-btn:hover {
+  background: var(--hover-gold);
+  border-color: var(--hover-gold);
+  color: var(--text-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section.custom-workflows {
+    padding: 80px 5%;
+  }
+  
+  .custom-headline {
+    font-size: 1.9rem;
+  }
+  
+  .custom-description {
+    font-size: 1rem;
+  }
+  
+  .custom-examples {
+    gap: 8px;
+  }
+  
+  .example-item {
+    font-size: 0.7rem;
+  }
+  
+  .custom-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Dark mode */
+[data-theme="midnight"] .section.custom-workflows {
+  background: #0a0a0a;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="midnight"] .custom-btn {
+  background: #f5f5f5;
+  color: #050505;
+  border-color: #f5f5f5;
+}
+
+[data-theme="midnight"] .custom-btn:hover {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #050505;
+}
+
 /* Contact Section */
 .section.contact {
   background: var(--text-color);
