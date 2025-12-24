@@ -1767,6 +1767,112 @@ h3 {
   }
 }
 
+
+
+/* Enhanced Fallback for Demo Previews */
+.iframe-fallback-enhanced {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-color) 0%, var(--secondary-bg) 100%);
+  border-radius: 8px;
+  padding: 60px 40px;
+}
+
+.fallback-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.fallback-icon {
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.fallback-icon svg {
+  color: var(--hover-gold);
+  filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.2));
+}
+
+.fallback-preview h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.fallback-preview p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.preview-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--hover-gold);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.preview-link-btn:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="midnight"] .preview-link-btn {
+  background: #d4af37;
+  color: #050505;
+}
+
+[data-theme="midnight"] .preview-link-btn:hover {
+  background: #f5f5f5;
+  color: #050505;
+}
+
+@media (max-width: 768px) {
+  .iframe-fallback-enhanced {
+    padding: 40px 20px;
+  }
+  
+  .fallback-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .fallback-preview h4 {
+    font-size: 1.2rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .section.demos {
