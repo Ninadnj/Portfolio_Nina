@@ -1250,6 +1250,29 @@ h3 {
 
 
 
+
+
+/* About Statement - Larger, more prominent */
+.about-statement {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .about-statement {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+[data-theme="midnight"] .about-statement {
+  color: var(--text-midnight);
+}
+
 /* ============================================
    ABOUT SECTION - Portrait Photo
    ============================================ */
