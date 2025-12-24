@@ -107,10 +107,22 @@ function initCustomCursor() {
 function handleIframeLoad(projectId) {
   const iframe = document.querySelector(`iframe[data-project="${projectId}"]`);
   const skeleton = document.getElementById(`skeleton-${projectId}`);
+  const fallback = document.getElementById(`fallback-${projectId}`);
+  
+  console.log(`Iframe loaded: ${projectId}`);
   
   if (iframe && skeleton) {
+    // Hide skeleton
     skeleton.classList.add('hidden');
+    // Show iframe
     iframe.classList.add('loaded');
+    iframe.style.opacity = '1';
+    iframe.style.zIndex = '2';
+  }
+  
+  // Make sure fallback stays hidden
+  if (fallback) {
+    fallback.classList.add('hidden');
   }
 }
 
@@ -163,23 +175,24 @@ function initLiveDemos() {
     });
   }
   
-  // Check for blocked iframes
-  const iframes = document.querySelectorAll('.demo-iframe');
-  iframes.forEach(iframe => {
-    const projectId = iframe.getAttribute('data-project');
-    setTimeout(() => {
-      try {
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        if (!iframe.classList.contains('loaded')) {
-          if (iframe.contentWindow.length === 0) {
-            handleIframeError(projectId);
-          }
-        }
-      } catch (e) {
-        handleIframeError(projectId);
-      }
-    }, 5000);
-  });
+  // DISABLED: Auto-detection was hiding working iframes
+// // Check for blocked iframes
+//   const iframes = document.querySelectorAll('.demo-iframe');
+//   iframes.forEach(iframe => {
+//     const projectId = iframe.getAttribute('data-project');
+//     setTimeout(() => {
+//       try {
+//         const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+//         if (!iframe.classList.contains('loaded')) {
+//           if (iframe.contentWindow.length === 0) {
+//             handleIframeError(projectId);
+//           }
+//         }
+//       } catch (e) {
+//         handleIframeError(projectId);
+//       }
+//     }, 5000);
+//   });
 }
 
 // ============================================
