@@ -672,3 +672,157 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+// ============================================
+// CHATBOT FUNCTIONALITY - Beauty Salon Assistant
+// ============================================
+
+// Salon Assistant Persona
+const SALON_ASSISTANT = {
+  name: "Beauty Salon Assistant",
+  bootMsg: "👋 Hi! I'm your Beauty Salon Assistant. I can help you with booking appointments, service information, pricing, and opening hours. How can I help you today?",
+  responses: {
+    greeting: [
+      "Hello! Welcome to our salon. How can I assist you today?",
+      "Hi there! I'm here to help with any questions about our services.",
+      "Welcome! What would you like to know about our salon?"
+    ],
+    booking: [
+      "I'd be happy to help you book an appointment! We have availability throughout the week. What day works best for you?",
+      "Great! Let me help you schedule that. What service are you interested in?",
+      "Perfect! I can check our calendar. What time of day do you prefer?"
+    ],
+    services: [
+      "We offer haircuts, coloring, styling, treatments, and spa services. Which one interests you?",
+      "Our most popular services are haircuts, highlights, balayage, and keratin treatments. Would you like details on any of these?",
+      "We have a full range of hair and beauty services. What are you looking for specifically?"
+    ],
+    pricing: [
+      "Our haircut prices start at $50, coloring from $80, and treatments from $60. Prices vary based on hair length and service complexity.",
+      "I can provide pricing information! What service are you interested in?",
+      "Our pricing is competitive and varies by service. Would you like a detailed price list?"
+    ],
+    hours: [
+      "We're open Monday-Saturday 9am-7pm, and Sunday 10am-5pm.",
+      "Our salon hours are 9am-7pm on weekdays, and 10am-5pm on Sundays. We're closed on major holidays.",
+      "You can visit us Monday through Saturday 9am-7pm, or Sunday 10am-5pm."
+    ],
+    default: [
+      "I'm here to help! You can ask me about booking appointments, our services, pricing, or opening hours.",
+      "That's a great question! For detailed information, feel free to call us or visit in person. Is there anything else I can help with?",
+      "I'd be happy to assist! What would you like to know about our salon services?"
+    ]
+  }
+};
+
+// Send message function
+function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const chatBody = document.getElementById('chatBody');
+  const typingIndicator = document.getElementById('typingIndicator');
+  
+  if (!input || !chatBody) return;
+  
+  const message = input.value.trim();
+  if (!message) return;
+  
+  // Add user message
+  const userMsg = document.createElement('div');
+  userMsg.className = 'message user';
+  userMsg.textContent = message;
+  chatBody.appendChild(userMsg);
+  
+  // Clear input
+  input.value = '';
+  
+  // Scroll to bottom
+  chatBody.scrollTop = chatBody.scrollHeight;
+  
+  // Show typing indicator
+  if (typingIndicator) {
+    typingIndicator.classList.remove('hidden');
+  }
+  
+  // Simulate bot response delay
+  setTimeout(() => {
+    if (typingIndicator) {
+      typingIndicator.classList.add('hidden');
+    }
+    
+    // Generate response
+    const response = generateResponse(message);
+    
+    // Add bot message
+    const botMsg = document.createElement('div');
+    botMsg.className = 'message bot';
+    botMsg.innerHTML = response;
+    chatBody.appendChild(botMsg);
+    
+    // Scroll to bottom
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }, 1000 + Math.random() * 1000);
+}
+
+// Generate response based on message
+function generateResponse(message) {
+  const msg = message.toLowerCase();
+  
+  // Check for keywords
+  if (msg.match(/hello|hi|hey|good morning|good afternoon/)) {
+    return getRandomResponse(SALON_ASSISTANT.responses.greeting);
+  }
+  
+  if (msg.match(/book|appointment|schedule|reservation/)) {
+    return getRandomResponse(SALON_ASSISTANT.responses.booking);
+  }
+  
+  if (msg.match(/service|haircut|color|treatment|what do you/)) {
+    return getRandomResponse(SALON_ASSISTANT.responses.services);
+  }
+  
+  if (msg.match(/price|cost|how much|pricing/)) {
+    return getRandomResponse(SALON_ASSISTANT.responses.pricing);
+  }
+  
+  if (msg.match(/hours|open|when|time/)) {
+    return getRandomResponse(SALON_ASSISTANT.responses.hours);
+  }
+  
+  if (msg.match(/thank|thanks/)) {
+    return "You're welcome! Let me know if you need anything else. 😊";
+  }
+  
+  // Default response
+  return getRandomResponse(SALON_ASSISTANT.responses.default);
+}
+
+// Get random response from array
+function getRandomResponse(responses) {
+  return responses[Math.floor(Math.random() * responses.length)];
+}
+
+// Reset chat
+function resetChat() {
+  const chatBody = document.getElementById('chatBody');
+  if (chatBody) {
+    chatBody.innerHTML = `
+      <div class="message bot">
+        ${SALON_ASSISTANT.bootMsg}
+      </div>
+    `;
+  }
+}
+
+// Enable Enter key to send
+document.addEventListener('DOMContentLoaded', function() {
+  const chatInput = document.getElementById('chatInput');
+  if (chatInput) {
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+  }
+});
