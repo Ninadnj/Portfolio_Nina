@@ -311,42 +311,46 @@
     <!-- AI Systems & Automations Section -->
     <section id="workflows" class="section workflows">
       <div class="container">
-        <div class="section-header">
-          <h2>AI Systems & Automations</h2>
-          <p class="section-intro">Built with n8n and conversational AI backends, adaptable across channels for real support work.</p>
+        <div class="workflows-header">
+          <h2>AI Chatbot Demo</h2>
+          <p class="workflows-subtitle">Try the live assistant below — ask about appointments, services, or hours</p>
+          <div class="demo-badge">
+            <span class="badge-pulse"></span>
+            <span class="badge-text">Live Demo</span>
+          </div>
         </div>
 
-        <div class="workflow-grid-layout">
-          <div class="workflow-info-card">
-            <h3>Support Automation</h3>
-            <p>This is a demonstration of a client-facing salon assistant. It can answer common questions, assist with bookings, and guide client requests. The same system can be adapted to different business needs.</p>
+        <div class="chatbot-showcase">
+          <div class="chatbot-info">
+            <h3>Beauty Salon Assistant</h3>
+            <p>This conversational AI handles customer inquiries automatically. Same system, different business contexts.</p>
             
-            <div class="workflow-visual-mini">
-              <span>📱 n8n</span>
-              <span>→</span>
-              <span>🤖 Autonomous</span>
-              <span>→</span>
-              <span>⚡ Real-time</span>
+            <div class="chatbot-features">
+              <div class="feature-item">
+                <span class="feature-icon">💬</span>
+                <span>Natural conversations</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🤖</span>
+                <span>AI-powered responses</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <span>Real-time answers</span>
+              </div>
             </div>
 
-            <div class="workflow-features">
-              <h4>Key Capabilities</h4>
-              <ul>
-                <li>Multi-channel support (web, SMS, email)</li>
-                <li>Context-aware conversations</li>
-                <li>Booking integration</li>
-                <li>24/7 availability</li>
-                <li>Customizable personas</li>
+            <div class="try-prompt">
+              <p class="prompt-text">👉 Try asking:</p>
+              <ul class="prompt-examples">
+                <li>"What are your hours?"</li>
+                <li>"I need a haircut"</li>
+                <li>"How much for coloring?"</li>
               </ul>
             </div>
           </div>
 
-          <div class="embedded-chat-column">
-            <div class="chat-demo-intro">
-              <h4>Live Demo — Beauty Salon Assistant</h4>
-              <p>Try asking about appointments, opening hours, or services.</p>
-            </div>
-
+          <div class="chatbot-demo">
             <div class="embedded-chat-container">
               <div class="chat-header-embedded">
                 <div class="chat-header-left">
@@ -359,7 +363,6 @@
               </div>
 
               <div class="chat-body scrollable" id="chatBody">
-                                <!-- Initial bot message -->
                 <div class="message bot">
                   👋 Hi! I'm your Beauty Salon Assistant. I can help you with:
                   <br>• Booking appointments
@@ -368,8 +371,6 @@
                   <br>• Opening hours
                   <br><br>How can I help you today?
                 </div>
-
-                <!-- Chat messages will appear here --><!-- Chat messages will appear here -->
               </div>
 
               <div class="typing-indicator hidden" id="typingIndicator">
@@ -382,7 +383,7 @@
                 <input 
                   type="text" 
                   id="chatInput" 
-                  placeholder="Type your message..."
+                  placeholder="Type your message..." 
                   aria-label="Chat message input"
                 />
                 <button type="button" onclick="sendMessage()" id="sendBtn" aria-label="Send message">
@@ -391,7 +392,7 @@
               </div>
 
               <p class="chat-helper-text">
-                This is a demo. Real implementation connects to your business systems.
+                Demo mode · Adaptable to any business
               </p>
             </div>
           </div>
