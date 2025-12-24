@@ -582,26 +582,28 @@ function handleIframeError(projectId) {
 }
 
 // Preview mode toggle (Desktop/Mobile)
+
+// Explicit send button click handler
 document.addEventListener('DOMContentLoaded', function() {
-  const previewToggle = document.getElementById('previewToggle');
+  const sendBtn = document.getElementById('sendBtn');
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      sendMessage();
+    });
+  }
   
-  if (previewToggle) {
-    const toggleOptions = previewToggle.querySelectorAll('.toggle-option');
-    const previewContainers = document.querySelectorAll('.demo-preview-container');
-    
-    toggleOptions.forEach(option => {
-      option.addEventListener('click', function() {
-        const mode = this.getAttribute('data-mode');
-        
-        // Update active state
-        toggleOptions.forEach(opt => opt.classList.remove('active'));
-        this.classList.add('active');
-        
-        // Update preview containers
-        previewContainers.forEach(container => {
-          container.classList.remove('desktop-mode', 'mobile-mode');
-          container.classList.add(`${mode}-mode`);
-        });
+  const chatInput = document.getElementById('chatInput');
+  if (chatInput) {
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+  }
+});
+
       });
     });
   }
