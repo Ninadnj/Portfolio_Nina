@@ -5,6 +5,7 @@
   --text-secondary: #3a3a3a;
   --accent-color: #1a1a1a;
   --micro-accent: #d4af37;
+  --hover-gold: #b38f1d; /* Darker gold for light mode */
   /* Metallic Gold */
   --secondary-bg: #ffffff;
   --border-color: rgba(0, 0, 0, 0.08); /* slightly stronger for light-mode legibility */
@@ -565,7 +566,7 @@ h3 {
 
 .project-item:hover .project-title,
 .project-item.project-active .project-title {
-  color: var(--micro-accent);
+  color: var(--hover-gold);
 }
 
 .project-category {
