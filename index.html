@@ -290,6 +290,111 @@
     </section>
 
     <!-- Contact Section -->
+    
+    <!-- AI Systems & Automations Section -->
+    <section id="workflows" class="section workflows">
+      <div class="container">
+        <div class="section-header">
+          <h2>AI Systems & Automations</h2>
+          <p class="section-intro">Built with n8n and conversational AI backends, adaptable across channels for real support work.</p>
+        </div>
+
+        <div class="workflow-grid-layout">
+          <div class="workflow-info-card">
+            <h3>Support Automation</h3>
+            <p>This is a demonstration of a client-facing salon assistant. It can answer common questions, assist with bookings, and guide client requests. The same system can be adapted to different business needs.</p>
+            
+            <div class="workflow-visual-mini">
+              <span>📱 n8n</span>
+              <span>→</span>
+              <span>🤖 Autonomous</span>
+              <span>→</span>
+              <span>⚡ Real-time</span>
+            </div>
+
+            <div class="workflow-features">
+              <h4>Key Capabilities</h4>
+              <ul>
+                <li>Multi-channel support (web, SMS, email)</li>
+                <li>Context-aware conversations</li>
+                <li>Booking integration</li>
+                <li>24/7 availability</li>
+                <li>Customizable personas</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="embedded-chat-column">
+            <div class="chat-demo-intro">
+              <h4>Live Demo — Beauty Salon Assistant</h4>
+              <p>Try asking about appointments, opening hours, or services.</p>
+            </div>
+
+            <div class="embedded-chat-container">
+              <div class="chat-header-embedded">
+                <div class="chat-header-left">
+                  <div class="status-dot"></div>
+                  <h3>Salon Assistant</h3>
+                </div>
+                <button class="chat-reset-btn" onclick="resetChat()" aria-label="Reset chat">
+                  ↻
+                </button>
+              </div>
+
+              <div class="chat-body scrollable" id="chatBody">
+                <!-- Persona Selection -->
+                <div id="personaSelection" class="persona-selection-wrapper">
+                  <p class="persona-prompt">Choose a demo persona to start:</p>
+                  <div class="persona-selection-container">
+                    <div class="persona-card" onclick="selectPersona('salon')">
+                      <i>💇</i>
+                      <h4>Hair Salon</h4>
+                      <p>Booking & services</p>
+                    </div>
+                    <div class="persona-card" onclick="selectPersona('receptionist')">
+                      <i>📋</i>
+                      <h4>Receptionist</h4>
+                      <p>General inquiries</p>
+                    </div>
+                    <div class="persona-card" onclick="selectPersona('booking')">
+                      <i>📅</i>
+                      <h4>Booking Manager</h4>
+                      <p>Appointments</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chat messages will appear here -->
+              </div>
+
+              <div class="typing-indicator hidden" id="typingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="chat-input-area embedded">
+                <input 
+                  type="text" 
+                  id="chatInput" 
+                  placeholder="Type your message..." 
+                  disabled
+                  aria-label="Chat message input"
+                />
+                <button onclick="sendMessage()" id="sendBtn" disabled aria-label="Send message">
+                  →
+                </button>
+              </div>
+
+              <p class="chat-helper-text">
+                This is a demo. Real implementation connects to your business systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section contact">
       <div class="container">
         <div class="contact-wrapper">
