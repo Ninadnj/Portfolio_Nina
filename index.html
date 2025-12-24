@@ -106,181 +106,185 @@
     </section>
 
     <!-- Web App Demos Section -->
-    <section id="demos" class="section">
+        <!-- Live Demos Section -->
+    <section id="demos" class="section demos">
       <div class="container">
         <div class="section-header">
-          <h2>Projects</h2>
-        </div>
-
-        <div class="projects-header-row">
-          <p class="projects-subcopy">
-            Selected AI systems, web apps, and automations.
-          </p>
-          <button type="button" id="demo-mode-toggle" class="demo-mode-toggle" aria-pressed="false">
-            <span class="demo-mode-label">Demo mode</span>
-            <span class="demo-mode-indicator" aria-hidden="true"></span>
-          </button>
-        </div>
-
-        <div class="project-index" role="list">
-          <!-- Project item 1 -->
-          <div class="project-item" data-project="themrstudio" data-image="the_mr_studio_preview"
-            data-title="THE MR Studio"
-            data-problem="Luxury salon needed a booking flow that felt as premium as the service—no clunky widgets."
-            data-solution="Built a pared-back booking journey tied into calendar + notifications so clients glide through."
-            data-live="Live production experience—explore it as a guest client." role="listitem" tabindex="0">
-            <div class="project-main">
-              <div class="project-info">
-                <span class="project-number">01</span>
-                <h3 class="project-title">THE MR Studio</h3>
-                <span class="project-category">Beauty & Aesthetic</span>
-              </div>
-              <div class="project-action">
-                <a href="https://themrstudio.net" target="_blank" class="project-cta-inline">Demo Site →</a>
-              </div>
-            </div>
-            <div class="project-extra">
-              <p class="project-summary">
-                Walk-ins were high; bookings felt off-brand. Built a calm booking layer tied to calendar + notifications.
-              </p>
-              <p class="project-stack">
-                Role: Product + Frontend. Outcome: Faster self-booking and fewer call-ins.
-              </p>
-            </div>
-            <a href="https://themrstudio.net" target="_blank" class="visit-link">Visit Site <span
-                class="arrow">↗</span></a>
-          </div>
-
-          <!-- Project item 2 -->
-          <div class="project-item" data-project="booking" data-image="luxury_booking_preview" data-title="Booking"
-            data-problem="Service businesses were losing time managing bookings manually."
-            data-solution="A lightweight booking system with approvals, reminders, and clear status for every request."
-            data-live="The core booking flow is live and testable." role="listitem" tabindex="0">
-            <div class="project-main">
-              <div class="project-info">
-                <span class="project-number">02</span>
-                <h3 class="project-title">Booking</h3>
-                <span class="project-category">SaaS / Management</span>
-              </div>
-              <div class="project-action">
-                <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" class="project-cta-inline">Demo Site →</a>
-              </div>
-            </div>
-            <div class="project-extra">
-              <p class="project-summary">
-                SMEs were juggling calls and DMs. Delivered a lightweight approval + reminders flow.
-              </p>
-              <p class="project-stack">
-                Role: Product + Fullstack. Outcome: Clear status for every request; less back-and-forth.
-              </p>
-            </div>
-            <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" class="visit-link">Visit Site <span
-                class="arrow">↗</span></a>
-          </div>
-
-          <!-- Project item 3 -->
-          <div class="project-item" data-project="aivision" data-image="ai_vision_lab_preview"
-            data-title="AI Vision Lab"
-            data-problem="Non-technical teams needed a way to test vision models without touching code."
-            data-solution="A simple interface to upload, inspect, and compare AI-generated outputs."
-            data-live="Demo flows can be walked through live during a call." role="listitem" tabindex="0">
-            <div class="project-main">
-              <div class="project-info">
-                <span class="project-number">03</span>
-                <h3 class="project-title">AI Vision Lab</h3>
-                <span class="project-category">Machine Learning</span>
-              </div>
-              <div class="project-action">
-                <a href="#" class="project-cta-inline">Demo Site →</a>
-              </div>
-            </div>
-            <div class="project-extra">
-              <p class="project-summary">
-                Teams needed to review CV outputs without code. Shipped a clean upload + inspect interface.
-              </p>
-              <p class="project-stack">
-                Role: Product + Frontend. Outcome: Faster stakeholder reviews; no slide decks.
-              </p>
-            </div>
-            <a href="#" class="visit-link">View Demo <span class="arrow">↗</span></a>
+          <h2>Selected Work — Live</h2>
+          <div class="demo-controls">
+            <button class="preview-toggle" id="previewToggle" aria-label="Toggle preview mode">
+              <span class="toggle-label">Preview:</span>
+              <span class="toggle-option active" data-mode="desktop">Desktop</span>
+              <span class="toggle-divider">/</span>
+              <span class="toggle-option" data-mode="mobile">Mobile</span>
+            </button>
           </div>
         </div>
 
-        <!-- Floating Preview Portal -->
-        <div class="hover-reveal" id="hover-reveal">
-          <div class="hover-reveal__inner">
-            <div class="hover-reveal__img" id="hover-reveal-img"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- n8n & Workflows Section -->
-    <section id="workflows" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>AI Systems & Automations</h2>
-        </div>
-
-        <div class="workflow-grid-layout">
-          <!-- Left: Visual/Info -->
-          <div class="workflow-info-card">
-            <h3>Support Automation</h3>
-            <p>
-              Built with n8n and conversational AI backends, adaptable across
-              channels for real support work.
-            </p>
-
-            <div class="workflow-visual-mini">
-              <div class="node n1">User</div>
-              <div class="connector c1"></div>
-              <div class="node n2">System</div>
-              <div class="connector c2"></div>
-              <div class="node n3">Answer</div>
+        <div class="live-demos-grid" id="liveDemosGrid">
+          
+          <!-- Demo Card 1: Lord of the Wings -->
+          <div class="demo-card" data-project="lotw">
+            <div class="demo-card-header">
+              <h3 class="demo-title">Lord of the Wings</h3>
+              <p class="demo-value">Restaurant website with online ordering — Increased digital orders by 40%</p>
+              <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Stripe</span>
+              </div>
             </div>
-
-            <ul class="tech-tags">
-              <li><i class="fas fa-bolt"></i> n8n</li>
-              <li><i class="fas fa-project-diagram"></i> Autonomous</li>
-              <li><i class="fas fa-clock"></i> Real-time</li>
-            </ul>
-          </div>
-
-          <!-- Right: Embedded Chat Interface -->
-          <div class="embedded-chat-column">
-            <div class="chat-demo-intro">
-              <h4>Live Demo — Beauty Salon Assistant</h4>
-              <p>
-                This is a demonstration of a client-facing salon assistant.<br />
-                It can answer common questions, assist with bookings, and guide client requests.<br />
-                The same system can be adapted to different business needs.
-              </p>
-            </div>
-            <div class="embedded-chat-container">
-              <div class="chat-header-embedded">
-                <div class="chat-header-left">
-                  <div class="status-dot"></div>
-                  <h3>Live Demo — Beauty Salon Assistant</h3>
+            
+            <div class="demo-preview-container desktop-mode">
+              <div class="iframe-skeleton" id="skeleton-lotw">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <iframe 
+                src="https://lordofthewings.gr/el/Lord-of-the-Wings-Eleusina" 
+                title="Lord of the Wings - Live Preview"
+                loading="lazy"
+                class="demo-iframe"
+                data-project="lotw"
+                onload="handleIframeLoad('lotw')"
+                onerror="handleIframeError('lotw')">
+              </iframe>
+              <div class="iframe-fallback hidden" id="fallback-lotw">
+                <div class="fallback-content">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                  </svg>
+                  <p>Live embed unavailable — open demo in a new tab</p>
                 </div>
-                <button id="chat-reset" class="chat-reset-btn" title="Reset Chat">
-                  <i class="fas fa-redo-alt"></i>
-                </button>
               </div>
-              <div class="chat-body scrollable" id="chat-messages">
-                <!-- JS injects chat messages -->
-              </div>
-              <div id="typing-indicator" class="typing-indicator hidden">
-                <span></span><span></span><span></span>
-              </div>
-              <form class="chat-input-area embedded" id="chat-form">
-                <input type="text" id="chat-input" placeholder="Ask about appointments, hours, or services..." autocomplete="off" />
-                <button type="submit" id="send-btn">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </form>
-              <p class="chat-helper-text">Try asking about appointments, opening hours, or services.</p>
+            </div>
+
+            <div class="demo-actions">
+              <a href="https://lordofthewings.gr/el/Lord-of-the-Wings-Eleusina" target="_blank" rel="noopener" class="btn-demo primary">
+                Open Full Site ↗
+              </a>
+              <button class="btn-demo secondary" onclick="scrollToCaseNotes('lotw')">
+                Case Notes
+              </button>
+            </div>
+
+            <div class="case-notes hidden" id="notes-lotw">
+              <h4>Project Overview</h4>
+              <p>Built a modern restaurant website with integrated online ordering system. Streamlined the customer journey from menu browsing to checkout, resulting in 40% increase in digital orders within 3 months.</p>
+              <p><strong>Key Features:</strong> Real-time menu updates, order tracking, payment integration, mobile-first design.</p>
             </div>
           </div>
+
+          <!-- Demo Card 2: My Portfolio -->
+          <div class="demo-card" data-project="portfolio">
+            <div class="demo-card-header">
+              <h3 class="demo-title">My Portfolio</h3>
+              <p class="demo-value">Personal portfolio showcasing work — Clean, minimal, conversion-focused</p>
+              <div class="tech-stack">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+            </div>
+            
+            <div class="demo-preview-container desktop-mode">
+              <div class="iframe-skeleton" id="skeleton-portfolio">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <iframe 
+                src="https://niname.netlify.app/" 
+                title="Portfolio - Live Preview"
+                loading="lazy"
+                class="demo-iframe"
+                data-project="portfolio"
+                onload="handleIframeLoad('portfolio')"
+                onerror="handleIframeError('portfolio')">
+              </iframe>
+              <div class="iframe-fallback hidden" id="fallback-portfolio">
+                <div class="fallback-content">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                  </svg>
+                  <p>Live embed unavailable — open demo in a new tab</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-actions">
+              <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="btn-demo primary">
+                Open Full Site ↗
+              </a>
+              <button class="btn-demo secondary" onclick="scrollToCaseNotes('portfolio')">
+                Case Notes
+              </button>
+            </div>
+
+            <div class="case-notes hidden" id="notes-portfolio">
+              <h4>Project Overview</h4>
+              <p>Designed and developed a minimalist portfolio website focused on showcasing work clearly and driving inquiries. Emphasizes clean typography, smooth interactions, and fast load times.</p>
+              <p><strong>Key Features:</strong> Responsive design, smooth scrolling, theme switching, optimized performance.</p>
+            </div>
+          </div>
+
+          <!-- Demo Card 3: Booking App -->
+          <div class="demo-card" data-project="booking">
+            <div class="demo-card-header">
+              <h3 class="demo-title">Demo Booking App</h3>
+              <p class="demo-value">Appointment booking system — Reduced admin time by 60%</p>
+              <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">MongoDB</span>
+              </div>
+            </div>
+            
+            <div class="demo-preview-container desktop-mode">
+              <div class="iframe-skeleton" id="skeleton-booking">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <iframe 
+                src="https://ninadnj.github.io/bookingwebapp/" 
+                title="Booking App - Live Preview"
+                loading="lazy"
+                class="demo-iframe"
+                data-project="booking"
+                onload="handleIframeLoad('booking')"
+                onerror="handleIframeError('booking')">
+              </iframe>
+              <div class="iframe-fallback hidden" id="fallback-booking">
+                <div class="fallback-content">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                  </svg>
+                  <p>Live embed unavailable — open demo in a new tab</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-actions">
+              <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" rel="noopener" class="btn-demo primary">
+                Open Full Site ↗
+              </a>
+              <button class="btn-demo secondary" onclick="scrollToCaseNotes('booking')">
+                Case Notes
+              </button>
+            </div>
+
+            <div class="case-notes hidden" id="notes-booking">
+              <h4>Project Overview</h4>
+              <p>Created a full-featured booking system for service businesses. Handles appointment scheduling, calendar integration, email notifications, and customer management. Reduced administrative overhead by 60%.</p>
+              <p><strong>Key Features:</strong> Real-time availability, automated reminders, payment processing, admin dashboard.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

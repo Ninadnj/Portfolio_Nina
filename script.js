@@ -548,3 +548,127 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+
+
+// ============================================
+// LIVE DEMOS FUNCTIONALITY
+// ============================================
+
+// Handle iframe load success
+function handleIframeLoad(projectId) {
+  const iframe = document.querySelector(`iframe[data-project="${projectId}"]`);
+  const skeleton = document.getElementById(`skeleton-${projectId}`);
+  
+  if (iframe && skeleton) {
+    // Hide skeleton
+    skeleton.classList.add('hidden');
+    // Show iframe
+    iframe.classList.add('loaded');
+  }
+}
+
+// Handle iframe load error (X-Frame-Options blocked)
+function handleIframeError(projectId) {
+  const skeleton = document.getElementById(`skeleton-${projectId}`);
+  const fallback = document.getElementById(`fallback-${projectId}`);
+  const iframe = document.querySelector(`iframe[data-project="${projectId}"]`);
+  
+  if (skeleton && fallback && iframe) {
+    skeleton.classList.add('hidden');
+    iframe.style.display = 'none';
+    fallback.classList.remove('hidden');
+  }
+}
+
+// Preview mode toggle (Desktop/Mobile)
+document.addEventListener('DOMContentLoaded', function() {
+  const previewToggle = document.getElementById('previewToggle');
+  
+  if (previewToggle) {
+    const toggleOptions = previewToggle.querySelectorAll('.toggle-option');
+    const previewContainers = document.querySelectorAll('.demo-preview-container');
+    
+    toggleOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        const mode = this.getAttribute('data-mode');
+        
+        // Update active state
+        toggleOptions.forEach(opt => opt.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Update preview containers
+        previewContainers.forEach(container => {
+          container.classList.remove('desktop-mode', 'mobile-mode');
+          container.classList.add(`${mode}-mode`);
+        });
+      });
+    });
+  }
+});
+
+// Scroll to case notes
+function scrollToCaseNotes(projectId) {
+  const caseNotes = document.getElementById(`notes-${projectId}`);
+  
+  if (caseNotes) {
+    // Toggle visibility
+    const isHidden = caseNotes.classList.contains('hidden');
+    
+    if (isHidden) {
+      caseNotes.classList.remove('hidden');
+      
+      // Scroll to it smoothly
+      setTimeout(() => {
+        caseNotes.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'nearest' 
+        });
+      }, 100);
+    } else {
+      caseNotes.classList.add('hidden');
+    }
+  }
+}
+
+// Detect if iframe is blocked by checking after a timeout
+document.addEventListener('DOMContentLoaded', function() {
+  const iframes = document.querySelectorAll('.demo-iframe');
+  
+  iframes.forEach(iframe => {
+    const projectId = iframe.getAttribute('data-project');
+    
+    // Set a timeout to check if iframe loaded
+    setTimeout(() => {
+      try {
+        // Try to access iframe content (will fail if blocked)
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        
+        // If we can't access it or it's still loading, check visibility
+        if (!iframe.classList.contains('loaded')) {
+          // Check if iframe has actually loaded content
+          if (iframe.contentWindow.length === 0) {
+            handleIframeError(projectId);
+          }
+        }
+      } catch (e) {
+        // Cross-origin error - iframe is blocked
+        handleIframeError(projectId);
+      }
+    }, 5000); // Wait 5 seconds before checking
+  });
+});
+
+// Add keyboard navigation for demo cards
+document.addEventListener('DOMContentLoaded', function() {
+  const demoButtons = document.querySelectorAll('.btn-demo');
+  
+  demoButtons.forEach(button => {
+    button.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+});
