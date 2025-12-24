@@ -136,7 +136,20 @@
             </div>
             
             <div class="demo-preview-container desktop-mode">
-              <div class="iframe-fallback-enhanced">
+              <div class="iframe-skeleton" id="skeleton-mrstudio">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <iframe 
+                src="https://themrstudio.net" 
+                title="THE MR Studio - Live Preview"
+                loading="lazy"
+                class="demo-iframe"
+                data-project="mrstudio"
+                onload="handleIframeLoad('mrstudio')"
+                onerror="handleIframeError('mrstudio')">
+              </iframe>
+              <div class="iframe-fallback-enhanced hidden" id="fallback-mrstudio">
                 <div class="fallback-preview">
                   <div class="fallback-icon">
                     <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -146,14 +159,13 @@
                       <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
                     </svg>
                   </div>
-                  <h4>Live Preview</h4>
-                  <p>Click below to experience the full site</p>
+                  <h4>Live Preview Unavailable</h4>
+                  <p>This site cannot be embedded. Click below to open it.</p>
                   <a href="https://themrstudio.net" target="_blank" rel="noopener" class="preview-link-btn">
                     Open Live Site →
                   </a>
                 </div>
-              </div>
-            </div>
+              </div></div>
 
             <div class="demo-actions">
               <a href="https://themrstudio.net" target="_blank" rel="noopener" class="btn-demo primary">
@@ -184,7 +196,20 @@
             </div>
             
             <div class="demo-preview-container desktop-mode">
-              <div class="iframe-fallback-enhanced">
+              <div class="iframe-skeleton" id="skeleton-portfolio">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <iframe 
+                src="https://niname.netlify.app/" 
+                title="Portfolio - Live Preview"
+                loading="lazy"
+                class="demo-iframe"
+                data-project="portfolio"
+                onload="handleIframeLoad('portfolio')"
+                onerror="handleIframeError('portfolio')">
+              </iframe>
+              <div class="iframe-fallback-enhanced hidden" id="fallback-portfolio">
                 <div class="fallback-preview">
                   <div class="fallback-icon">
                     <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -194,14 +219,13 @@
                       <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
                     </svg>
                   </div>
-                  <h4>Live Preview</h4>
-                  <p>Click below to experience the full site</p>
+                  <h4>Live Preview Unavailable</h4>
+                  <p>This site cannot be embedded. Click below to open it.</p>
                   <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="preview-link-btn">
                     Open Live Site →
                   </a>
                 </div>
-              </div>
-            </div>
+              </div></div>
 
             <div class="demo-actions">
               <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="btn-demo primary">
