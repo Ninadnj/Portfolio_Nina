@@ -361,6 +361,17 @@ function initPortraitFadeIn() {
   observer.observe(portrait);
 }
 
+
+
+// Fill chat input with suggested prompt
+function fillPrompt(text) {
+  const input = document.getElementById('chatInput');
+  if (input) {
+    input.value = text;
+    input.focus();
+  }
+}
+
 // ============================================
 // INITIALIZE ALL ON DOM READY
 // ============================================

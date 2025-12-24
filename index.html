@@ -311,89 +311,91 @@
     <!-- AI Systems & Automations Section -->
     <section id="workflows" class="section workflows">
       <div class="container">
-        <div class="workflows-header">
-          <h2>AI Chatbot Demo</h2>
-          <p class="workflows-subtitle">Try the live assistant below — ask about appointments, services, or hours</p>
-          <div class="demo-badge">
-            <span class="badge-pulse"></span>
-            <span class="badge-text">Live Demo</span>
-          </div>
+        <div class="demo-header">
+          <h2>Live Automation Demo</h2>
+          <p class="demo-subtitle">An AI-powered booking assistant orchestrated with n8n.<br>This demo shows how workflows can think, decide, and act.</p>
         </div>
 
-        <div class="chatbot-showcase">
-          <div class="chatbot-info">
-            <h3>Beauty Salon Assistant</h3>
-            <p>This conversational AI handles customer inquiries automatically. Same system, different business contexts.</p>
-            
-            <div class="chatbot-features">
-              <div class="feature-item">
-                <span class="feature-icon">💬</span>
-                <span>Natural conversations</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🤖</span>
-                <span>AI-powered responses</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">⚡</span>
-                <span>Real-time answers</span>
-              </div>
+        <div class="demo-layout">
+          <div class="demo-guidance">
+            <h3>How to try the demo</h3>
+            <ul class="guidance-list">
+              <li>Ask to book an appointment</li>
+              <li>Check availability</li>
+              <li>Reschedule or cancel a booking</li>
+            </ul>
+
+            <div class="suggested-prompts">
+              <p class="prompts-label">Suggested prompts:</p>
+              <button class="prompt-chip" onclick="fillPrompt('I want to book a haircut')">Book a haircut</button>
+              <button class="prompt-chip" onclick="fillPrompt('What times are available tomorrow?')">Check availability</button>
+              <button class="prompt-chip" onclick="fillPrompt('What are your prices?')">View pricing</button>
             </div>
 
-            <div class="try-prompt">
-              <p class="prompt-text">👉 Try asking:</p>
-              <ul class="prompt-examples">
-                <li>"What are your hours?"</li>
-                <li>"I need a haircut"</li>
-                <li>"How much for coloring?"</li>
-              </ul>
+            <div class="system-flow">
+              <p class="flow-label">System flow:</p>
+              <div class="flow-steps">
+                <span>Message</span>
+                <span class="flow-arrow">→</span>
+                <span>AI</span>
+                <span class="flow-arrow">→</span>
+                <span>Workflow</span>
+                <span class="flow-arrow">→</span>
+                <span>Action</span>
+              </div>
             </div>
           </div>
 
-          <div class="chatbot-demo">
-            <div class="embedded-chat-container">
-              <div class="chat-header-embedded">
-                <div class="chat-header-left">
-                  <div class="status-dot"></div>
-                  <h3>Salon Assistant</h3>
+          <div class="demo-container">
+            <div class="demo-frame">
+              <div class="demo-status">
+                <div class="status-indicator">
+                  <span class="status-dot online"></span>
+                  <span class="status-text">System online</span>
                 </div>
-                <button class="chat-reset-btn" onclick="resetChat()" aria-label="Reset chat">
-                  ↻
-                </button>
-              </div>
-
-              <div class="chat-body scrollable" id="chatBody">
-                <div class="message bot">
-                  👋 Hi! I'm your Beauty Salon Assistant. I can help you with:
-                  <br>• Booking appointments
-                  <br>• Service information
-                  <br>• Pricing and packages
-                  <br>• Opening hours
-                  <br><br>How can I help you today?
+                <div class="status-indicator">
+                  <span class="status-icon">⚡</span>
+                  <span class="status-text">AI-generated response</span>
                 </div>
               </div>
 
-              <div class="typing-indicator hidden" id="typingIndicator">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="chat-interface">
+                <div class="chat-messages" id="chatBody">
+                  <div class="message assistant">
+                    <div class="message-content">
+                      Hi! I'm your booking assistant. I can help you schedule appointments, check availability, and answer questions about our services. How can I assist you today?
+                    </div>
+                  </div>
+                </div>
+
+                <div class="typing-indicator hidden" id="typingIndicator">
+                  <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="chat-input-container">
+                  <input 
+                    type="text" 
+                    id="chatInput" 
+                    class="chat-input"
+                    placeholder="Type your message..." 
+                    aria-label="Chat message input"
+                  />
+                  <button type="button" onclick="sendMessage()" id="sendBtn" class="send-button" aria-label="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              <div class="chat-input-area embedded">
-                <input 
-                  type="text" 
-                  id="chatInput" 
-                  placeholder="Type your message..." 
-                  aria-label="Chat message input"
-                />
-                <button type="button" onclick="sendMessage()" id="sendBtn" aria-label="Send message">
-                  →
-                </button>
+              <div class="demo-disclaimer">
+                Demo environment — logic and capabilities can be adapted to specific business needs.
               </div>
-
-              <p class="chat-helper-text">
-                Demo mode · Adaptable to any business
-              </p>
             </div>
           </div>
         </div>
