@@ -147,6 +147,19 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
+/* Light mode header - ensure solid white background and dark text */
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .logo,
+[data-theme="light"] .nav-links a,
+[data-theme="light"] .theme-toggle {
+  color: #0a0a0a;
+}
+
+
 .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -172,7 +185,7 @@ h3 {
   letter-spacing: 2px;
   transition: var(--transition);
   position: relative;
-  opacity: 0.9; /* higher base opacity for clarity */
+  opacity: 1; /* higher base opacity for clarity */
 }
 
 .nav-links a:hover {
@@ -218,7 +231,7 @@ h3 {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .theme-toggle:hover {
