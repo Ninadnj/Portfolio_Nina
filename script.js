@@ -264,19 +264,39 @@ function sendMessage() {
     typingIndicator.classList.remove('hidden');
   }
 
-  // Bot response
-  setTimeout(() => {
-    if (typingIndicator) {
-      typingIndicator.classList.add('hidden');
-    }
+  // Send to n8n Webhook
+  fetch('https://n8n.ninadnj.me/webhook/portfolio-chatbot', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ chatInput: message })
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (typingIndicator) typingIndicator.classList.add('hidden');
 
-    const response = generateResponse(message);
-    const botMsg = document.createElement('div');
-    botMsg.className = 'message bot';
-    botMsg.innerHTML = response;
-    chatBody.appendChild(botMsg);
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }, 1000 + Math.random() * 1000);
+      // Expecting response in data.output or data.response
+      const botResponse = data.output || data.response || generateResponse(message);
+
+      const botMsg = document.createElement('div');
+      botMsg.className = 'message bot';
+      botMsg.innerHTML = botResponse;
+      chatBody.appendChild(botMsg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      if (typingIndicator) typingIndicator.classList.add('hidden');
+
+      // Fallback to local logic on error
+      const response = generateResponse(message);
+      const botMsg = document.createElement('div');
+      botMsg.className = 'message bot';
+      botMsg.innerHTML = response;
+      chatBody.appendChild(botMsg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    });
 }
 
 function getRandomResponse(responses) {
