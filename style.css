@@ -2964,18 +2964,19 @@ body[data-lang="ka"] [data-lang-fr] {
 
 
 
-  /* Contact Section */
+  /* Contact Section - Ultra Modern */
   .section.contact {
     background: var(--bg-color);
-    padding: 120px 5% 100px;
+    padding: 140px 5% 120px;
+    position: relative;
   }
 
   .contact-content {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 80px;
   }
 
   .contact-header {
@@ -2984,112 +2985,117 @@ body[data-lang="ka"] [data-lang-fr] {
 
   .contact-header h2 {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
-    margin: 0 0 16px 0;
+    margin: 0 0 24px 0;
     color: var(--text-color);
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    line-height: 1.1;
   }
 
   .contact-intro {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
     margin: 0;
+    font-weight: 400;
+    letter-spacing: -0.2px;
   }
 
   .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
 
   .contact-card {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 32px 28px;
-    background: var(--secondary-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 36px 32px;
+    background: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 16px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
     overflow: hidden;
   }
 
-  .contact-card:hover {
-    border-color: var(--hover-gold);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--text-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .contact-card:hover::before {
+    transform: scaleX(1);
+  }
 
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  }
 
   .contact-card-icon {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-color);
-    border-radius: 6px;
     color: var(--text-color);
     transition: all 0.3s ease;
   }
 
   .contact-card:hover .contact-card-icon {
-    background: var(--hover-gold);
-    color: var(--text-color);
+    transform: scale(1.1);
   }
 
   .contact-card-content {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
+    width: 100%;
   }
 
   .contact-label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-secondary);
-    opacity: 0.7;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: -0.3px;
   }
 
   .contact-value {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: var(--text-color);
-  }
-
-  .contact-footer {
-    text-align: center;
-    padding-top: 40px;
-    border-top: 1px solid var(--border-color);
-  }
-
-  .contact-footer p {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 400;
     color: var(--text-secondary);
-    opacity: 0.6;
-    margin: 0;
+    letter-spacing: 0;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .section.contact {
-      padding: 80px 5% 60px;
+      padding: 100px 5% 80px;
     }
 
     .contact-header h2 {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
+      letter-spacing: -1.5px;
+    }
+
+    .contact-intro {
+      font-size: 1.1rem;
     }
 
     .contact-methods {
@@ -3097,7 +3103,7 @@ body[data-lang="ka"] [data-lang-fr] {
     }
 
     .contact-card {
-      padding: 24px 20px;
+      padding: 32px 28px;
     }
   }
 
@@ -3108,16 +3114,11 @@ body[data-lang="ka"] [data-lang-fr] {
   }
 
   [data-theme="midnight"] .contact-card:hover {
-    border-color: #d4af37;
+    border-color: #fff;
   }
 
-  [data-theme="midnight"] .contact-card-icon {
-    background: #050505;
-  }
-
-  [data-theme="midnight"] .contact-card:hover .contact-card-icon {
-    background: #d4af37;
-    color: #050505;
+  [data-theme="midnight"] .contact-card::before {
+    background: #fff;
   }
 
   /* Footer */
