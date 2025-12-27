@@ -3138,12 +3138,13 @@ body[data-lang="ka"] [data-lang-fr] {
   }
 
   .footer-icon {
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
     vertical-align: middle;
     fill: currentColor;
-    margin: 0 4px;
-    opacity: 0.8;
+    margin: 0 3px;
+    opacity: 0.7;
   }
 
   .social-links {
