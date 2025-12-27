@@ -201,38 +201,41 @@ function initLiveDemos() {
 // CHATBOT - Beauty Salon Assistant
 // ============================================
 
-const SALON_ASSISTANT = {
-  name: "Beauty Salon Assistant",
+const PORTFOLIO_ASSISTANT = {
+  name: "Nina's Assistant",
   responses: {
     greeting: [
-      "Hello! Welcome to our salon. How can I assist you today?",
-      "Hi there! I'm here to help with any questions about our services.",
-      "Welcome! What would you like to know about our salon?"
-    ],
-    booking: [
-      "I'd be happy to help you book an appointment! We have availability throughout the week. What day works best for you?",
-      "Great! Let me help you schedule that. What service are you interested in?",
-      "Perfect! I can check our calendar. What time of day do you prefer?"
+      "Hello! I'm Nina's AI assistant. How can I help you regarding her work or services?",
+      "Hi there! I can answer questions about Nina's projects, skills, or how to get in touch.",
+      "Welcome! Ask me anything about Nina's portfolio or automation services."
     ],
     services: [
-      "We offer haircuts, coloring, styling, treatments, and spa services. Which one interests you?",
-      "Our most popular services are haircuts, highlights, balayage, and keratin treatments. Would you like details on any of these?",
-      "We have a full range of hair and beauty services. What are you looking for specifically?"
+      "Nina specializes in building custom web applications, AI-powered automation workflows (n8n), and premium digital experiences.",
+      "She builds intelligent systems—from booking platforms to content repurposing engines using AI and modern web tech.",
+      "Her main services include: 1. Custom Web Development 2. AI Automation Workflows 3. System Architecture Design."
+    ],
+    projects: [
+      "You can see several live demos above, including the AlpineStay luxury booking platform and the MR Studio salon system.",
+      "Check out the 'Selected Projects' section to see the AlpineStay booking platform and other live demos.",
+      "Nina has built booking systems, portfolio sites, and automation implementations. Scroll up to 'Web Apps' to explore them."
+    ],
+    contact: [
+      "You can reach Nina via email at ninodoinjashvili@gmail.com, on WhatsApp, or through LinkedIn.",
+      "Ready to collaborate? Click the 'Start a Project' button or email ninodoinjashvili@gmail.com.",
+      "The best way to get in touch is via the contact options below—Email, WhatsApp, or LinkedIn."
+    ],
+    tech: [
+      "Nina works with a modern stack: HTML/CSS (Vanilla & Tailwind), JavaScript, React, Node.js, and n8n for automation.",
+      "For automations, she uses n8n and LLMs. For web, she focuses on clean, performant code using React or Vanilla JS."
     ],
     pricing: [
-      "Our haircut prices start at $50, coloring from $80, and treatments from $60. Prices vary based on hair length and service complexity.",
-      "I can provide pricing information! What service are you interested in?",
-      "Our pricing is competitive and varies by service. Would you like a detailed price list?"
-    ],
-    hours: [
-      "We're open Monday-Saturday 9am-7pm, and Sunday 10am-5pm.",
-      "Our salon hours are 9am-7pm on weekdays, and 10am-5pm on Sundays. We're closed on major holidays.",
-      "You can visit us Monday through Saturday 9am-7pm, or Sunday 10am-5pm."
+      "Each project is unique. Please reach out directly to discuss your specific needs and get a custom quote.",
+      "Pricing depends on the scope and complexity of the system. Contact Nina to discuss your requirements."
     ],
     default: [
-      "I'm here to help! You can ask me about booking appointments, our services, pricing, or opening hours.",
-      "That's a great question! For detailed information, feel free to call us or visit in person. Is there anything else I can help with?",
-      "I'd be happy to assist! What would you like to know about our salon services?"
+      "I'm here to help! You can ask about Nina's services, view her tech stack, or ask how to contact her.",
+      "I can tell you about Nina's previous work, her coding skills, or how to start a new project with her.",
+      "Feel free to ask about web development, AI automations, or how to get in touch."
     ]
   }
 };
@@ -276,33 +279,36 @@ function sendMessage() {
   }, 1000 + Math.random() * 1000);
 }
 
+function getRandomResponse(responses) {
+  return responses[Math.floor(Math.random() * responses.length)];
+}
+
 function generateResponse(message) {
   const msg = message.toLowerCase();
 
   if (msg.match(/hello|hi|hey|good morning|good afternoon/)) {
-    return getRandomResponse(SALON_ASSISTANT.responses.greeting);
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.greeting);
   }
-  if (msg.match(/book|appointment|schedule|reservation/)) {
-    return getRandomResponse(SALON_ASSISTANT.responses.booking);
+  if (msg.match(/service|build|make|offer|do|what can you/)) {
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.services);
   }
-  if (msg.match(/service|haircut|color|treatment|what do you/)) {
-    return getRandomResponse(SALON_ASSISTANT.responses.services);
+  if (msg.match(/project|work|portfolio|demo|app/)) {
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.projects);
   }
-  if (msg.match(/price|cost|how much|pricing/)) {
-    return getRandomResponse(SALON_ASSISTANT.responses.pricing);
+  if (msg.match(/contact|email|reach|hire|touch/)) {
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.contact);
   }
-  if (msg.match(/hours|open|when|time/)) {
-    return getRandomResponse(SALON_ASSISTANT.responses.hours);
+  if (msg.match(/tech|stack|language|code|tool|react|node|n8n/)) {
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.tech);
   }
-  if (msg.match(/thank|thanks/)) {
-    return "You're welcome! Let me know if you need anything else. 😊";
+  if (msg.match(/price|cost|how much|rate/)) {
+    return getRandomResponse(PORTFOLIO_ASSISTANT.responses.pricing);
+  }
+  if (msg.match(/thank/)) {
+    return "You're welcome! Let me know if you have other questions about Nina's work. 😊";
   }
 
-  return getRandomResponse(SALON_ASSISTANT.responses.default);
-}
-
-function getRandomResponse(responses) {
-  return responses[Math.floor(Math.random() * responses.length)];
+  return getRandomResponse(PORTFOLIO_ASSISTANT.responses.default);
 }
 
 function resetChat() {
@@ -310,12 +316,13 @@ function resetChat() {
   if (chatBody) {
     chatBody.innerHTML = `
       <div class="message bot">
-        👋 Hi! I'm your Beauty Salon Assistant. I can help you with:
-        <br>• Booking appointments
-        <br>• Service information
-        <br>• Pricing and packages
-        <br>• Opening hours
-        <br><br>How can I help you today?
+        <div class="message-content">
+          👋 Hi! I'm Nina's AI Assistant. I can help you with:
+          <br>• Project inquiries
+          <br>• Technical skills & Services
+          <br>• Contact information
+          <br><br>How can I assist you today?
+        </div>
       </div>
     `;
   }
