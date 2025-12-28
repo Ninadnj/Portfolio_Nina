@@ -2962,21 +2962,22 @@ body[data-lang="ka"] [data-lang-fr] {
     color: #000;
   }
 
-
-
-  /* Contact Section - Ultra Modern */
+  /* Contact Section - Refined & Consistent */
   .section.contact {
     background: var(--bg-color);
-    padding: 140px 5% 120px;
+    padding: 120px 5% 100px;
+    /* Consistent with other sections */
     position: relative;
   }
 
   .contact-content {
-    max-width: 1100px;
+    max-width: 1000px;
+    /* Aligned with other section widths */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 60px;
+    /* Consistent gap */
   }
 
   .contact-header {
@@ -2985,26 +2986,30 @@ body[data-lang="ka"] [data-lang-fr] {
 
   .contact-header h2 {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 3rem;
+    /* Consistent with other h2 sizes */
     font-weight: 600;
-    margin: 0 0 24px 0;
+    margin: 0 0 20px 0;
     color: var(--text-color);
-    letter-spacing: -2px;
-    line-height: 1.1;
+    letter-spacing: -1px;
+    /* Consistent letter-spacing */
+    line-height: 1.2;
   }
 
   .contact-intro {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    /* Consistent with other intros */
     color: var(--text-secondary);
     margin: 0;
     font-weight: 400;
-    letter-spacing: -0.2px;
+    letter-spacing: 0;
   }
 
   .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    /* Consistent gap */
   }
 
   .contact-card {
@@ -3012,10 +3017,13 @@ body[data-lang="ka"] [data-lang-fr] {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    padding: 36px 32px;
-    background: var(--bg-color);
+    padding: 32px 28px;
+    /* Consistent padding */
+    background: var(--secondary-bg);
+    /* Use secondary-bg like other cards */
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: var(--radius);
+    /* Use design system variable: 8px */
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
@@ -3030,7 +3038,8 @@ body[data-lang="ka"] [data-lang-fr] {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--text-color);
+    background: var(--hover-gold);
+    /* Consistent accent color */
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3042,23 +3051,32 @@ body[data-lang="ka"] [data-lang-fr] {
 
   .contact-card:hover {
     transform: translateY(-4px);
-    border-color: var(--text-color);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: var(--hover-gold);
+    /* Consistent hover color */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    /* Consistent shadow */
   }
 
   .contact-card-icon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--bg-color);
+    /* Add background for visual weight */
+    border-radius: 6px;
     color: var(--text-color);
     transition: all 0.3s ease;
   }
 
   .contact-card:hover .contact-card-icon {
-    transform: scale(1.1);
+    background: var(--hover-gold);
+    /* Consistent hover treatment */
+    color: var(--bg-color);
+    transform: scale(1.05);
+    /* Subtle scale */
   }
 
   .contact-card-content {
@@ -3069,33 +3087,36 @@ body[data-lang="ka"] [data-lang-fr] {
   }
 
   .contact-label {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-family: var(--font-mono);
+    /* Use mono for labels like other sections */
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--text-color);
-    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+    opacity: 0.8;
   }
 
   .contact-value {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
     letter-spacing: 0;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     .section.contact {
-      padding: 100px 5% 80px;
+      padding: 80px 5% 60px;
     }
 
     .contact-header h2 {
-      font-size: 2.8rem;
-      letter-spacing: -1.5px;
+      font-size: 2.2rem;
+      letter-spacing: -0.8px;
     }
 
     .contact-intro {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     .contact-methods {
@@ -3103,7 +3124,7 @@ body[data-lang="ka"] [data-lang-fr] {
     }
 
     .contact-card {
-      padding: 32px 28px;
+      padding: 28px 24px;
     }
   }
 
@@ -3114,11 +3135,20 @@ body[data-lang="ka"] [data-lang-fr] {
   }
 
   [data-theme="midnight"] .contact-card:hover {
-    border-color: #fff;
+    border-color: var(--hover-gold);
   }
 
   [data-theme="midnight"] .contact-card::before {
-    background: #fff;
+    background: var(--hover-gold);
+  }
+
+  [data-theme="midnight"] .contact-card-icon {
+    background: #050505;
+  }
+
+  [data-theme="midnight"] .contact-card:hover .contact-card-icon {
+    background: var(--hover-gold);
+    color: #050505;
   }
 
   /* Footer */
