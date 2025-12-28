@@ -217,8 +217,9 @@ h3 {
 }
 
 [data-theme="midnight"] .cta-btn:hover {
-  background: #d4af37 !important;
-  color: #050505 !important;
+  background: var(--hover-gold) !important;
+  /* Consistent with light mode */
+  color: var(--bg-color) !important;
 }
 
 
@@ -278,12 +279,16 @@ h3 {
   background: var(--text-color) !important;
   color: var(--bg-color) !important;
   padding: 10px 20px !important;
-  border-radius: 2px !important;
+  border-radius: var(--radius) !important;
+  /* Consistent 8px */
   opacity: 1 !important;
+  transition: all 0.3s ease !important;
 }
 
 .cta-btn:hover {
-  background: var(--accent-color) !important;
+  background: var(--hover-gold) !important;
+  /* Consistent hover color */
+  transform: translateY(-1px) !important;
 }
 
 .theme-toggle {
@@ -487,41 +492,49 @@ body[data-lang="ka"] [data-lang-fr] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 40px;
+  padding: 16px 36px;
+  /* Slightly reduced for consistency */
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
+  /* Consistent with labels */
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-color);
   background: var(--text-color);
   color: var(--bg-color);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.4, 1), background-color 0.4s ease,
-    color 0.4s ease, border-color 0.4s ease;
+  border-radius: var(--radius);
+  /* Consistent 8px */
+  transition: all 0.3s ease;
+  /* Consistent transition */
 }
 
 .btn-modern:hover {
-  background: transparent;
-  color: var(--text-color);
+  background: var(--hover-gold);
+  /* Consistent hover color */
+  color: var(--bg-color);
   transform: translateY(-2px);
-  border-color: var(--text-color);
+  border-color: var(--hover-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
 
 .btn-modern.secondary {
   background: transparent;
   color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 .btn-modern.secondary:hover {
-  background: var(--text-color);
+  background: var(--hover-gold);
   color: var(--bg-color);
+  border-color: var(--hover-gold);
 }
 
 .btn-modern:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 2px solid var(--hover-gold);
   outline-offset: 4px;
-  transform: translateY(-1px);
 }
 
 .btn-with-note::after {
