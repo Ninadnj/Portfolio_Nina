@@ -440,6 +440,34 @@ function initLanguageToggle() {
   });
 }
 
+// ============================================
+// MOBILE MENU
+// ============================================
+
+function initMobileMenu() {
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const body = document.body;
+
+  if (!menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    body.classList.toggle('menu-open'); // Prevent scrolling when menu is open
+  });
+
+  // Close menu when clicking a link
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
+  });
+}
+
 function setLanguage(lang) {
   const body = document.body;
   const langEn = document.querySelector('.lang-en');
@@ -474,6 +502,7 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log('Initializing portfolio...');
 
   initLanguageToggle();
+  initMobileMenu();
 
   initThemeToggle();
   initCustomCursor();
