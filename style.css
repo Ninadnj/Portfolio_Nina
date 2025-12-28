@@ -2975,54 +2975,21 @@ body[data-lang="ka"] [data-lang-fr] {
     color: #000;
   }
 
-  /* Contact Section - Refined & Consistent */
+  /* Contact Section - Uses Global Section Styles */
   .section.contact {
     background: var(--bg-color);
     padding: 120px 5% 100px;
     /* Consistent with other sections */
-    position: relative;
   }
 
-  .contact-content {
-    max-width: 1000px;
-    /* Aligned with other section widths */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    /* Consistent gap */
-  }
-
-  .contact-header {
-    text-align: center;
-  }
-
-  .contact-header h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    /* Consistent with other h2 sizes */
-    font-weight: 600;
-    margin: 0 0 20px 0;
-    color: var(--text-color);
-    letter-spacing: -1px;
-    /* Consistent letter-spacing */
-    line-height: 1.2;
-  }
-
-  .contact-intro {
-    font-size: 1.2rem;
-    /* Consistent with other intros */
-    color: var(--text-secondary);
-    margin: 0;
-    font-weight: 400;
-    letter-spacing: 0;
-  }
-
+  /* Contact Methods Grid */
   .contact-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
     /* Consistent gap */
+    margin-top: 60px;
+    /* Space after section-intro */
   }
 
   .contact-card {
@@ -3123,17 +3090,9 @@ body[data-lang="ka"] [data-lang-fr] {
       padding: 80px 5% 60px;
     }
 
-    .contact-header h2 {
-      font-size: 2.2rem;
-      letter-spacing: -0.8px;
-    }
-
-    .contact-intro {
-      font-size: 1.05rem;
-    }
-
     .contact-methods {
       grid-template-columns: 1fr;
+      margin-top: 40px;
     }
 
     .contact-card {
