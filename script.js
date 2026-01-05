@@ -84,6 +84,25 @@ function handleIframeError(projectId) {
   }
 }
 
+function scrollToCaseNotes(projectId) {
+  const notes = document.getElementById(`notes-${projectId}`);
+  if (!notes) return;
+
+  // Toggle visibility
+  const isHidden = notes.classList.contains('hidden');
+
+  // Close all other case notes first (optional, but cleaner)
+  document.querySelectorAll('.case-notes').forEach(node => {
+    node.classList.add('hidden');
+  });
+
+  if (isHidden) {
+    notes.classList.remove('hidden');
+    // Smooth scroll to the notes
+    notes.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
 
 
 function initLiveDemos() {
