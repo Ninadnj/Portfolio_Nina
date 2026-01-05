@@ -120,6 +120,58 @@
 
         <div class="live-demos-grid" id="liveDemosGrid">
 
+          <!-- Demo Card: Deep Learning Colorizer -->
+          <div class="demo-card" data-project="colorizer">
+            <div class="demo-card-header">
+              <h3 class="demo-title"><span data-lang-en>Deep Learning Image Colorizer</span><span
+                  data-lang-fr>Coloriseur d'Images par Deep Learning</span></h3>
+              <p class="demo-value"><span data-lang-en>GAN-based image restoration — U-Net architecture, CIE Lab color
+                  space prediction</span><span data-lang-fr>Restauration d'image basée sur GAN — Architecture U-Net,
+                  prédiction d'espace couleur CIE Lab</span></p>
+              <div class="tech-stack">
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">Keras</span>
+                <span class="tech-badge">GAN (Pix2Pix)</span>
+                <span class="tech-badge">Python</span>
+              </div>
+            </div>
+
+            <div class="demo-preview-container desktop-mode">
+              <div class="iframe-skeleton hidden" id="skeleton-colorizer">
+                <div class="skeleton-pulse"></div>
+                <span class="skeleton-text">Loading preview...</span>
+              </div>
+              <div class="iframe-fallback-enhanced" id="fallback-colorizer">
+                <div class="fallback-preview">
+                  <img src="colorizer-thumb.jpg" alt="Deep Learning Colorizer Preview" class="fallback-img"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                  <h4>Advanced Image Restoration</h4>
+                  <p>A deep generative model specialized in transforming grayscale archives into vibrant, realistic
+                    imagery using adversarial training.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-actions">
+              <button class="btn-demo primary" onclick="scrollToCaseNotes('colorizer')">
+                View Project Details
+              </button>
+              <button class="btn-demo secondary" onclick="scrollToCaseNotes('colorizer')">
+                Case Notes
+              </button>
+            </div>
+
+            <div class="case-notes hidden" id="notes-colorizer">
+              <h4>Project Overview</h4>
+              <p>Implemented a Generative Adversarial Network (GAN) using the Pix2Pix framework to automate photo
+                colorization. The system utilizes a U-Net generator with skip connections to maintain spatial integrity
+                and realistic texture reproduction.</p>
+              <p><strong>Deep Learning Highlights:</strong> CIE Lab color space optimization (predicting AB channels
+                from L), Adversarial + L1 multi-component loss, and automated preprocessing pipelines for large-scale
+                image datasets.</p>
+            </div>
+          </div>
+
           <!-- Demo Card: AlpineStay -->
           <div class="demo-card" data-project="alpinestay">
             <div class="demo-card-header">
@@ -180,63 +232,6 @@
                 scroll reveals, and a seamless booking flow.</p>
               <p><strong>Key Features:</strong> Personalized hero section, scroll-triggered animations, integrated
                 availability calendar, premium responsive design.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card: Deep Learning Colorizer -->
-          <div class="demo-card" data-project="colorizer">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>Deep Learning Image Colorizer</span><span
-                  data-lang-fr>Coloriseur d'Images par Deep Learning</span></h3>
-              <p class="demo-value"><span data-lang-en>GAN-based image restoration — U-Net architecture, CIE Lab color
-                  space prediction</span><span data-lang-fr>Restauration d'image basée sur GAN — Architecture U-Net,
-                  prédiction d'espace couleur CIE Lab</span></p>
-              <div class="tech-stack">
-                <span class="tech-badge">TensorFlow</span>
-                <span class="tech-badge">Keras</span>
-                <span class="tech-badge">GAN (Pix2Pix)</span>
-                <span class="tech-badge">Python</span>
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton hidden" id="skeleton-colorizer">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <div class="iframe-fallback-enhanced" id="fallback-colorizer">
-                <div class="fallback-preview">
-                  <img src="colorizer-thumb.jpg" alt="Deep Learning Colorizer Preview" class="fallback-img"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
-                  <h4>Advanced Image Restoration</h4>
-                  <p>A deep generative model specialized in transforming grayscale archives into vibrant, realistic
-                    imagery using adversarial training.</p>
-                  <a href="https://github.com/andrzejdambski/colorizer" target="_blank" rel="noopener"
-                    class="preview-link-btn">
-                    View on GitHub →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <a href="https://github.com/andrzejdambski/colorizer" target="_blank" rel="noopener"
-                class="btn-demo primary">
-                Source Code ↗
-              </a>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('colorizer')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-colorizer">
-              <h4>Project Overview</h4>
-              <p>Implemented a Generative Adversarial Network (GAN) using the Pix2Pix framework to automate photo
-                colorization. The system utilizes a U-Net generator with skip connections to maintain spatial integrity
-                and realistic texture reproduction.</p>
-              <p><strong>Deep Learning Highlights:</strong> CIE Lab color space optimization (predicting AB channels
-                from L), Adversarial + L1 multi-component loss, and automated preprocessing pipelines for large-scale
-                image datasets.</p>
             </div>
           </div>
 
