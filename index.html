@@ -24,9 +24,9 @@
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="#about"><span data-lang-en>About</span><span data-lang-fr>À propos</span></a></li>
-          <li><a href="#demos"><span data-lang-en>Applications</span><span data-lang-fr>Applications</span></a></li>
           <li><a href="#workflows"><span data-lang-en>Automations</span><span data-lang-fr>Automatisations</span></a>
           </li>
+          <li><a href="#demos"><span data-lang-en>Applications</span><span data-lang-fr>Applications</span></a></li>
           <li><a href="#contact" class="cta-btn"><span data-lang-en>Start a Project</span><span data-lang-fr>Lancer un
                 Projet</span></a></li>
           <li>
@@ -97,382 +97,6 @@
             <p class="about-location"><span data-lang-en>Based in Paris · Working Globally</span><span
                 data-lang-fr>Basée à Paris · Travail à l'International</span></p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Live Demos Section -->
-    <section id="demos" class="section demos">
-      <div class="container">
-        <div class="section-header">
-          <h2><span data-lang-en>Selected Projects — Live Demos</span><span data-lang-fr>Projets Sélectionnés — Démos en
-              Ligne</span>
-          </h2>
-          <div class="demo-controls">
-            <button class="preview-toggle" id="previewToggle" aria-label="Toggle preview mode">
-              <span class="toggle-label">Preview:</span>
-              <span class="toggle-option active" data-mode="desktop">Desktop</span>
-              <span class="toggle-divider">/</span>
-              <span class="toggle-option" data-mode="mobile">Mobile</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="live-demos-grid" id="liveDemosGrid">
-
-          <!-- Demo Card: Deep Learning Colorizer -->
-          <div class="demo-card" data-project="colorizer">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>Deep Learning Image Colorizer</span><span
-                  data-lang-fr>Coloriseur d'Images par Deep Learning</span></h3>
-              <p class="demo-value"><span data-lang-en>The project implements a conditional GAN based on the Pix2Pix
-                  architecture, using a U-Net generator and a PatchGAN discriminator to perform grayscale-to-color image
-                  translation in LAB color space.</span><span data-lang-fr>Le projet implémente un GAN conditionnel basé
-                  sur l'architecture Pix2Pix, utilisant un générateur U-Net et un discriminateur PatchGAN pour effectuer
-                  une translation d'image de niveaux de gris vers la couleur dans l'espace colorimétrique LAB.</span>
-              </p>
-              <div class="tech-stack">
-                <span class="tech-badge">TensorFlow</span>
-                <span class="tech-badge">Keras</span>
-                <span class="tech-badge">GAN (Pix2Pix)</span>
-                <span class="tech-badge">Python</span>
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton hidden" id="skeleton-colorizer">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <div class="iframe-fallback-enhanced" id="fallback-colorizer">
-                <div class="fallback-preview">
-                  <img src="colorizer-thumb.jpg" alt="Deep Learning Colorizer Preview" class="fallback-img"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
-                  <h4>Advanced Image Restoration</h4>
-                  <p>A deep generative model specialized in transforming grayscale archives into vibrant, realistic
-                    imagery using adversarial training.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <button class="btn-demo primary" onclick="scrollToCaseNotes('colorizer')">
-                View Project Details
-              </button>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('colorizer')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-colorizer">
-              <h4>Project Overview</h4>
-              <p>Implemented a Generative Adversarial Network (GAN) using the Pix2Pix framework to automate photo
-                colorization. The system utilizes a U-Net generator with skip connections to maintain spatial integrity
-                and realistic texture reproduction.</p>
-              <p><strong>Deep Learning Highlights:</strong> CIE Lab color space optimization (predicting AB channels
-                from L), Adversarial + L1 multi-component loss, and automated preprocessing pipelines for large-scale
-                image datasets.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card: Autonomous AI Booking Agent -->
-          <div class="demo-card" data-project="ai-booking-agent">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>Autonomous AI Booking Agent</span><span data-lang-fr>Agent de
-                  Réservation IA Autonome</span></h3>
-              <p class="demo-value"><span data-lang-en>Production-grade n8n workflow — Autonomous calendar management,
-                  intent-driven booking, and real-time availability sync.</span><span data-lang-fr>Workflow n8n de
-                  niveau production — Gestion autonome du calendrier, réservation par intention et synchro de
-                  disponibilité en temps réel.</span></p>
-              <div class="tech-stack">
-                <span class="tech-badge">n8n</span>
-                <span class="tech-badge">LLM (GPT-4)</span>
-                <span class="tech-badge">LangChain</span>
-                <span class="tech-badge">Calendar Integration</span>
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton hidden" id="skeleton-ai-booking-agent">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <div class="iframe-fallback-enhanced" id="fallback-ai-booking-agent">
-                <div class="fallback-preview">
-                  <img src="ai-agent-thumb.jpg" alt="AI Booking Agent Preview" class="fallback-img"
-                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
-                  <h4>Autonomous System Orchestration</h4>
-                  <p>A sophisticated AI concierge that manages the entire appointment lifecycle: from checking
-                    availability to processing cancellations via natural language.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <button class="btn-demo primary" onclick="scrollToCaseNotes('ai-booking-agent')">
-                View Agent Logic
-              </button>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('ai-booking-agent')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-ai-booking-agent">
-              <h4>Project Overview</h4>
-              <p>Developed an end-to-end autonomous agent using <strong>n8n</strong> that serves as a 24/7 digital
-                receptionist. The agent intelligently detects user intent to perform complex calendar actions without
-                manual intervention.</p>
-              <p><strong>Key Capabilities:</strong> Multi-step intent resolution (Book/Cancel/Check), dynamic time-slot
-                calculation via Google Calendar API, and automated client onboarding via PostgreSQL.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card: AlpineStay -->
-          <div class="demo-card" data-project="alpinestay">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>AlpineStay Luxury</span><span data-lang-fr>AlpineStay
-                  Luxe</span></h3>
-              <p class="demo-value"><span data-lang-en>Premium cabin booking platform — Quiet luxury aesthetic,
-                  cinematic scrolls</span><span data-lang-fr>Plateforme de réservation de chalets premium — Esthétique
-                  luxe discret, défilement cinématographique</span></p>
-              <div class="tech-stack">
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton" id="skeleton-alpinestay">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <iframe src="https://ninadnj.github.io/AlpineStay/" title="AlpineStay - Live Preview" loading="lazy"
-                class="demo-iframe" data-project="alpinestay" onload="handleIframeLoad('alpinestay')"
-                onerror="handleIframeError('alpinestay')">
-              </iframe>
-              <div class="iframe-fallback-enhanced hidden" id="fallback-alpinestay">
-                <div class="fallback-preview">
-                  <div class="fallback-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="1.5">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                      <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
-                    </svg>
-                  </div>
-                  <h4>Live Preview Unavailable</h4>
-                  <p>This site cannot be embedded. Click below to open it.</p>
-                  <a href="https://ninadnj.github.io/AlpineStay/" target="_blank" rel="noopener"
-                    class="preview-link-btn">
-                    Open Live Site →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <a href="https://ninadnj.github.io/AlpineStay/" target="_blank" rel="noopener" class="btn-demo primary">
-                Open Full Site ↗
-              </a>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('alpinestay')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-alpinestay">
-              <h4>Project Overview</h4>
-              <p>Designed a quiet luxury booking experience for high-end alpine retreats. Focus on atmosphere, cinematic
-                scroll reveals, and a seamless booking flow.</p>
-              <p><strong>Key Features:</strong> Personalized hero section, scroll-triggered animations, integrated
-                availability calendar, premium responsive design.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card 1: THE MR Studio -->
-          <div class="demo-card" data-project="mrstudio">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>THE MR Studio</span></h3>
-              <p class="demo-value"><span data-lang-en>Premium salon booking system — Streamlined appointments, reduced
-                  no-shows by 75%</span><span data-lang-fr>Système de réservation de salon premium — Rendez-vous
-                  simplifiés, taux d'absentéisme réduit de 75%</span></p>
-              <div class="tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Calendar API</span>
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton" id="skeleton-mrstudio">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <iframe src="https://themrstudio.net" title="THE MR Studio - Live Preview" loading="lazy"
-                class="demo-iframe" data-project="mrstudio" onload="handleIframeLoad('mrstudio')"
-                onerror="handleIframeError('mrstudio')">
-              </iframe>
-              <div class="iframe-fallback-enhanced hidden" id="fallback-mrstudio">
-                <div class="fallback-preview">
-                  <div class="fallback-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="1.5">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                      <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
-                    </svg>
-                  </div>
-                  <h4>Live Preview Unavailable</h4>
-                  <p>This site cannot be embedded. Click below to open it.</p>
-                  <a href="https://themrstudio.net" target="_blank" rel="noopener" class="preview-link-btn">
-                    Open Live Site →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <a href="https://themrstudio.net" target="_blank" rel="noopener" class="btn-demo primary">
-                Open Full Site ↗
-              </a>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('mrstudio')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-mrstudio">
-              <h4>Project Overview</h4>
-              <p>Designed and developed a premium booking system for a high-end salon. Created a seamless appointment
-                flow with calendar integration, automated reminders, and payment processing. Reduced no-shows by 75% and
-                increased booking efficiency.</p>
-              <p><strong>Key Features:</strong> Real-time availability, automated SMS/email reminders, payment
-                integration, customer profiles, admin dashboard with analytics.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card 2: My Portfolio -->
-          <div class="demo-card" data-project="portfolio">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>Personal Portfolio</span><span data-lang-fr>Portfolio
-                  Personnel</span></h3>
-              <p class="demo-value"><span data-lang-en>Personal portfolio showcasing work — Clean, minimal,
-                  conversion-focused</span><span data-lang-fr>Portfolio personnel présentant le travail — Propre,
-                  minimal, axé sur la conversion</span></p>
-              <div class="tech-stack">
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton" id="skeleton-portfolio">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <iframe src="https://niname.netlify.app/" title="Portfolio - Live Preview" loading="lazy"
-                class="demo-iframe" data-project="portfolio" onload="handleIframeLoad('portfolio')"
-                onerror="handleIframeError('portfolio')">
-              </iframe>
-              <div class="iframe-fallback-enhanced hidden" id="fallback-portfolio">
-                <div class="fallback-preview">
-                  <div class="fallback-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="1.5">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                      <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
-                    </svg>
-                  </div>
-                  <h4>Live Preview Unavailable</h4>
-                  <p>This site cannot be embedded. Click below to open it.</p>
-                  <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="preview-link-btn">
-                    Open Live Site →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="btn-demo primary">
-                Open Full Site ↗
-              </a>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('portfolio')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-portfolio">
-              <h4>Project Overview</h4>
-              <p>Designed and developed a minimalist portfolio website focused on showcasing work clearly and driving
-                inquiries. Emphasizes clean typography, smooth interactions, and fast load times.</p>
-              <p><strong>Key Features:</strong> Responsive design, smooth scrolling, theme switching, optimized
-                performance.</p>
-            </div>
-          </div>
-
-          <!-- Demo Card 3: Booking App -->
-          <div class="demo-card" data-project="booking">
-            <div class="demo-card-header">
-              <h3 class="demo-title"><span data-lang-en>Booking Application Demo</span><span data-lang-fr>Démo
-                  Application de
-                  Réservation</span></h3>
-              <p class="demo-value"><span data-lang-en>Appointment booking system — Reduced admin time by
-                  60%</span><span data-lang-fr>Système de réservation de rendez-vous — Temps d'administration réduit de
-                  60%</span></p>
-              <div class="tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Express</span>
-                <span class="tech-badge">MongoDB</span>
-              </div>
-            </div>
-
-            <div class="demo-preview-container desktop-mode">
-              <div class="iframe-skeleton" id="skeleton-booking">
-                <div class="skeleton-pulse"></div>
-                <span class="skeleton-text">Loading preview...</span>
-              </div>
-              <iframe src="https://ninadnj.github.io/bookingwebapp/" title="Booking App - Live Preview" loading="lazy"
-                class="demo-iframe" data-project="booking" onload="handleIframeLoad('booking')"
-                onerror="handleIframeError('booking')">
-              </iframe>
-              <div class="iframe-fallback-enhanced hidden" id="fallback-booking">
-                <div class="fallback-preview">
-                  <div class="fallback-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="1.5">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                      <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
-                    </svg>
-                  </div>
-                  <h4>Live Preview</h4>
-                  <p>Click below to experience the full site</p>
-                  <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" rel="noopener"
-                    class="preview-link-btn">
-                    Open Live Site →
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="demo-actions">
-              <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" rel="noopener"
-                class="btn-demo primary">
-                Open Full Site ↗
-              </a>
-              <button class="btn-demo secondary" onclick="scrollToCaseNotes('booking')">
-                Case Notes
-              </button>
-            </div>
-
-            <div class="case-notes hidden" id="notes-booking">
-              <h4>Project Overview</h4>
-              <p>Created a full-featured booking system for service businesses. Handles appointment scheduling, calendar
-                integration, email notifications, and customer management. Reduced administrative overhead by 60%.</p>
-              <p><strong>Key Features:</strong> Real-time availability, automated reminders, payment processing, admin
-                dashboard.</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -701,6 +325,404 @@
         </div>
       </div>
     </section>
+
+    <!-- Live Demos Section -->
+    <section id="demos" class="section demos">
+      <div class="container">
+        <div class="section-header">
+          <h2><span data-lang-en>Selected Projects — Live Demos</span><span data-lang-fr>Projets Sélectionnés — Démos en
+              Ligne</span>
+          </h2>
+          <div class="demo-controls">
+            <button class="preview-toggle" id="previewToggle" aria-label="Toggle preview mode">
+              <span class="toggle-label">Preview:</span>
+              <span class="toggle-option active" data-mode="desktop">Desktop</span>
+              <span class="toggle-divider">/</span>
+              <span class="toggle-option" data-mode="mobile">Mobile</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-category">
+          <h3 class="category-header"><span data-lang-en>Intelligent Automation & AI Systems</span><span
+              data-lang-fr>Systèmes d'IA et d'Automatisation</span></h3>
+          <div class="live-demos-grid">
+
+            <!-- Demo Card: Deep Learning Colorizer -->
+            <div class="demo-card" data-project="colorizer">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>Deep Learning Image Colorizer</span><span
+                    data-lang-fr>Coloriseur d'Images par Deep Learning</span></h3>
+                <p class="demo-value"><span data-lang-en>The project implements a conditional GAN based on the Pix2Pix
+                    architecture, using a U-Net generator and a PatchGAN discriminator to perform grayscale-to-color
+                    image
+                    translation in LAB color space.</span><span data-lang-fr>Le projet implémente un GAN conditionnel
+                    basé
+                    sur l'architecture Pix2Pix, utilisant un générateur U-Net et un discriminateur PatchGAN pour
+                    effectuer
+                    une translation d'image de niveaux de gris vers la couleur dans l'espace colorimétrique LAB.</span>
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">TensorFlow</span>
+                  <span class="tech-badge">Keras</span>
+                  <span class="tech-badge">GAN (Pix2Pix)</span>
+                  <span class="tech-badge">Python</span>
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton hidden" id="skeleton-colorizer">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <div class="iframe-fallback-enhanced" id="fallback-colorizer">
+                  <div class="fallback-preview">
+                    <img src="colorizer-thumb.jpg" alt="Deep Learning Colorizer Preview" class="fallback-img"
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                    <h4>Advanced Image Restoration</h4>
+                    <p>A deep generative model specialized in transforming grayscale archives into vibrant, realistic
+                      imagery using adversarial training.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <button class="btn-demo primary" onclick="scrollToCaseNotes('colorizer')">
+                  View Project Details
+                </button>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('colorizer')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-colorizer">
+                <h4>Project Overview</h4>
+                <p>Implemented a Generative Adversarial Network (GAN) using the Pix2Pix framework to automate photo
+                  colorization. The system utilizes a U-Net generator with skip connections to maintain spatial
+                  integrity
+                  and realistic texture reproduction.</p>
+                <p><strong>Deep Learning Highlights:</strong> CIE Lab color space optimization (predicting AB channels
+                  from L), Adversarial + L1 multi-component loss, and automated preprocessing pipelines for large-scale
+                  image datasets.</p>
+              </div>
+            </div>
+
+            <!-- Demo Card: Autonomous AI Booking Agent -->
+            <div class="demo-card" data-project="ai-booking-agent">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>Autonomous AI Booking Agent</span><span data-lang-fr>Agent de
+                    Réservation IA Autonome</span></h3>
+                <p class="demo-value"><span data-lang-en>Production-grade n8n workflow — Autonomous calendar management,
+                    intent-driven booking, and real-time availability sync.</span><span data-lang-fr>Workflow n8n de
+                    niveau production — Gestion autonome du calendrier, réservation par intention et synchro de
+                    disponibilité en temps réel.</span></p>
+                <div class="tech-stack">
+                  <span class="tech-badge">n8n</span>
+                  <span class="tech-badge">LLM (GPT-4)</span>
+                  <span class="tech-badge">LangChain</span>
+                  <span class="tech-badge">Calendar Integration</span>
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton hidden" id="skeleton-ai-booking-agent">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <div class="iframe-fallback-enhanced" id="fallback-ai-booking-agent">
+                  <div class="fallback-preview">
+                    <img src="ai-agent-thumb.jpg" alt="AI Booking Agent Preview" class="fallback-img"
+                      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                    <h4>Autonomous System Orchestration</h4>
+                    <p>A sophisticated AI concierge that manages the entire appointment lifecycle: from checking
+                      availability to processing cancellations via natural language.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <button class="btn-demo primary" onclick="scrollToCaseNotes('ai-booking-agent')">
+                  View Agent Logic
+                </button>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('ai-booking-agent')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-ai-booking-agent">
+                <h4>Project Overview</h4>
+                <p>Developed an end-to-end autonomous agent using <strong>n8n</strong> that serves as a 24/7 digital
+                  receptionist. The agent intelligently detects user intent to perform complex calendar actions without
+                  manual intervention.</p>
+                <p><strong>Key Capabilities:</strong> Multi-step intent resolution (Book/Cancel/Check), dynamic
+                  time-slot
+                  calculation via Google Calendar API, and automated client onboarding via PostgreSQL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-category" style="margin-top: 80px;">
+          <h3 class="category-header"><span data-lang-en>Digital Products & Web Applications</span><span
+              data-lang-fr>Produits Numériques et Applications Web</span></h3>
+          <div class="live-demos-grid">
+
+            <!-- Demo Card: AlpineStay -->
+            <div class="demo-card" data-project="alpinestay">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>AlpineStay Luxury</span><span data-lang-fr>AlpineStay
+                    Luxe</span></h3>
+                <p class="demo-value"><span data-lang-en>Premium cabin booking platform — Quiet luxury aesthetic,
+                    cinematic scrolls</span><span data-lang-fr>Plateforme de réservation de chalets premium — Esthétique
+                    luxe discret, défilement cinématographique</span></p>
+                <div class="tech-stack">
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton" id="skeleton-alpinestay">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <iframe src="https://ninadnj.github.io/AlpineStay/" title="AlpineStay - Live Preview" loading="lazy"
+                  class="demo-iframe" data-project="alpinestay" onload="handleIframeLoad('alpinestay')"
+                  onerror="handleIframeError('alpinestay')">
+                </iframe>
+                <div class="iframe-fallback-enhanced hidden" id="fallback-alpinestay">
+                  <div class="fallback-preview">
+                    <div class="fallback-icon">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
+                      </svg>
+                    </div>
+                    <h4>Live Preview Unavailable</h4>
+                    <p>This site cannot be embedded. Click below to open it.</p>
+                    <a href="https://ninadnj.github.io/AlpineStay/" target="_blank" rel="noopener"
+                      class="preview-link-btn">
+                      Open Live Site →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://ninadnj.github.io/AlpineStay/" target="_blank" rel="noopener" class="btn-demo primary">
+                  Open Full Site ↗
+                </a>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('alpinestay')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-alpinestay">
+                <h4>Project Overview</h4>
+                <p>Designed a quiet luxury booking experience for high-end alpine retreats. Focus on atmosphere,
+                  cinematic
+                  scroll reveals, and a seamless booking flow.</p>
+                <p><strong>Key Features:</strong> Personalized hero section, scroll-triggered animations, integrated
+                  availability calendar, premium responsive design.</p>
+              </div>
+            </div>
+
+            <!-- Demo Card 1: THE MR Studio -->
+            <div class="demo-card" data-project="mrstudio">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>THE MR Studio</span></h3>
+                <p class="demo-value"><span data-lang-en>Premium salon booking system — Streamlined appointments,
+                    reduced
+                    no-shows by 75%</span><span data-lang-fr>Système de réservation de salon premium — Rendez-vous
+                    simplifiés, taux d'absentéisme réduit de 75%</span></p>
+                <div class="tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">Calendar API</span>
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton" id="skeleton-mrstudio">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <iframe src="https://themrstudio.net" title="THE MR Studio - Live Preview" loading="lazy"
+                  class="demo-iframe" data-project="mrstudio" onload="handleIframeLoad('mrstudio')"
+                  onerror="handleIframeError('mrstudio')">
+                </iframe>
+                <div class="iframe-fallback-enhanced hidden" id="fallback-mrstudio">
+                  <div class="fallback-preview">
+                    <div class="fallback-icon">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
+                      </svg>
+                    </div>
+                    <h4>Live Preview Unavailable</h4>
+                    <p>This site cannot be embedded. Click below to open it.</p>
+                    <a href="https://themrstudio.net" target="_blank" rel="noopener" class="preview-link-btn">
+                      Open Live Site →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://themrstudio.net" target="_blank" rel="noopener" class="btn-demo primary">
+                  Open Full Site ↗
+                </a>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('mrstudio')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-mrstudio">
+                <h4>Project Overview</h4>
+                <p>Designed and developed a premium booking system for a high-end salon. Created a seamless appointment
+                  flow with calendar integration, automated reminders, and payment processing. Reduced no-shows by 75%
+                  and
+                  increased booking efficiency.</p>
+                <p><strong>Key Features:</strong> Real-time availability, automated SMS/email reminders, payment
+                  integration, customer profiles, admin dashboard with analytics.</p>
+              </div>
+            </div>
+
+            <!-- Demo Card 2: My Portfolio -->
+            <div class="demo-card" data-project="portfolio">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>Personal Portfolio</span><span data-lang-fr>Portfolio
+                    Personnel</span></h3>
+                <p class="demo-value"><span data-lang-en>Personal portfolio showcasing work — Clean, minimal,
+                    conversion-focused</span><span data-lang-fr>Portfolio personnel présentant le travail — Propre,
+                    minimal, axé sur la conversion</span></p>
+                <div class="tech-stack">
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton" id="skeleton-portfolio">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <iframe src="https://niname.netlify.app/" title="Portfolio - Live Preview" loading="lazy"
+                  class="demo-iframe" data-project="portfolio" onload="handleIframeLoad('portfolio')"
+                  onerror="handleIframeError('portfolio')">
+                </iframe>
+                <div class="iframe-fallback-enhanced hidden" id="fallback-portfolio">
+                  <div class="fallback-preview">
+                    <div class="fallback-icon">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
+                      </svg>
+                    </div>
+                    <h4>Live Preview Unavailable</h4>
+                    <p>This site cannot be embedded. Click below to open it.</p>
+                    <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="preview-link-btn">
+                      Open Live Site →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://niname.netlify.app/" target="_blank" rel="noopener" class="btn-demo primary">
+                  Open Full Site ↗
+                </a>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('portfolio')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-portfolio">
+                <h4>Project Overview</h4>
+                <p>Designed and developed a minimalist portfolio website focused on showcasing work clearly and driving
+                  inquiries. Emphasizes clean typography, smooth interactions, and fast load times.</p>
+                <p><strong>Key Features:</strong> Responsive design, smooth scrolling, theme switching, optimized
+                  performance.</p>
+              </div>
+            </div>
+
+            <!-- Demo Card 3: Booking App -->
+            <div class="demo-card" data-project="booking">
+              <div class="demo-card-header">
+                <h3 class="demo-title"><span data-lang-en>Booking Application Demo</span><span data-lang-fr>Démo
+                    Application de
+                    Réservation</span></h3>
+                <p class="demo-value"><span data-lang-en>Appointment booking system — Reduced admin time by
+                    60%</span><span data-lang-fr>Système de réservation de rendez-vous — Temps d'administration réduit
+                    de
+                    60%</span></p>
+                <div class="tech-stack">
+                  <span class="tech-badge">React</span>
+                  <span class="tech-badge">Express</span>
+                  <span class="tech-badge">MongoDB</span>
+                </div>
+              </div>
+
+              <div class="demo-preview-container desktop-mode">
+                <div class="iframe-skeleton" id="skeleton-booking">
+                  <div class="skeleton-pulse"></div>
+                  <span class="skeleton-text">Loading preview...</span>
+                </div>
+                <iframe src="https://ninadnj.github.io/bookingwebapp/" title="Booking App - Live Preview" loading="lazy"
+                  class="demo-iframe" data-project="booking" onload="handleIframeLoad('booking')"
+                  onerror="handleIframeError('booking')">
+                </iframe>
+                <div class="iframe-fallback-enhanced hidden" id="fallback-booking">
+                  <div class="fallback-preview">
+                    <div class="fallback-icon">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                        <path d="M7 7h10M7 11h6" stroke-opacity="0.3"></path>
+                      </svg>
+                    </div>
+                    <h4>Live Preview</h4>
+                    <p>Click below to experience the full site</p>
+                    <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" rel="noopener"
+                      class="preview-link-btn">
+                      Open Live Site →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://ninadnj.github.io/bookingwebapp/" target="_blank" rel="noopener"
+                  class="btn-demo primary">
+                  Open Full Site ↗
+                </a>
+                <button class="btn-demo secondary" onclick="scrollToCaseNotes('booking')">
+                  Case Notes
+                </button>
+              </div>
+
+              <div class="case-notes hidden" id="notes-booking">
+                <h4>Project Overview</h4>
+                <p>Created a full-featured booking system for service businesses. Handles appointment scheduling,
+                  calendar
+                  integration, email notifications, and customer management. Reduced administrative overhead by 60%.</p>
+                <p><strong>Key Features:</strong> Real-time availability, automated reminders, payment processing, admin
+                  dashboard.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section id="contact" class="section contact">
       <div class="container">
