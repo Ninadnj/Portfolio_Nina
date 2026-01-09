@@ -296,7 +296,8 @@
     <!-- Autonomous AI Booking Agent Section -->
     <section id="booking-agent" class="section booking-agent">
       <div class="container">
-        <div class="engine-card">
+        <div class="linear-card">
+          <div class="linear-card-shimmer"></div>
           <div class="engine-header">
             <h2 class="engine-title"><span data-lang-en>Autonomous AI Booking Agent</span><span data-lang-fr>Agent de
                 Réservation IA Autonome</span></h2>
@@ -307,10 +308,10 @@
 
           <div class="engine-layout">
             <div class="engine-visual">
-              <div class="fallback-preview"
-                style="background: var(--tertiary-bg); border-radius: 12px; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <img src="booking-agent-workflow.jpg" alt="AI Booking Agent Preview"
-                  style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
+              <div class="linear-visual-container">
+                <img src="linear_abstract_booking_agent.png" alt="AI Booking Agent Preview" class="linear-abstract-img"
+                  loading="lazy">
+                <div class="glass-overlay"></div>
               </div>
             </div>
 
@@ -352,9 +353,8 @@
             </div>
           </div>
 
-          <!-- Hidden Case Notes for Agent -->
-          <div class="case-notes hidden" id="notes-ai-booking-agent"
-            style="margin-top: 40px; padding: 40px; border-top: 1px solid var(--border-color);">
+          <!-- Case Notes for Agent -->
+          <div class="case-notes hidden" id="notes-ai-booking-agent">
             <h4>Technical Architecture</h4>
             <p>Developed an end-to-end autonomous agent using <strong>n8n</strong>. The system employs a decision engine
               that routes natural language inputs to specific API actions.</p>
